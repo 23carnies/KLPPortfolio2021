@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import headshot from '../images/headshot.png';
-// import logo from '../images/gatsby-icon.png'
+import styled from 'styled-components'
 
 const About = () => {
     return ( 
