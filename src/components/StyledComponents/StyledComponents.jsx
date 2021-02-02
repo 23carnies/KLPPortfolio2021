@@ -1,14 +1,38 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'gatsby'
 
 export const Header = styled.header`
-    background: #000;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
+    background: #6b098c;
     
 `;
 
+export const Nav = styled.nav`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
 
+`;
+
+export const List = styled.li`
+    list-style-type: none;
+
+`;
+
+
+export const NavItem = styled(Link)`
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+`;
+
+export const Name = styled(NavItem)`
+    margin-left: 30px;
+`;
+
+export const About = styled(NavItem)`
+    margin-left: auto;
+`;
 
 
 
@@ -37,7 +61,7 @@ export const htwo = styled.h2`
     color: white;
 `;
 
-export const Link = styled.button`
+export const BTN = styled.button`
     width: 75px;
     height: 50px;
     
