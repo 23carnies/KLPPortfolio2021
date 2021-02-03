@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
+import imgPath from '../../images/chinese-times-square.jpg'
 
+// Header 
 export const Header = styled.header`
     background: #6b098c;
-    
 `;
 
 export const Nav = styled.nav`
@@ -11,14 +12,11 @@ export const Nav = styled.nav`
     flex-direction: row;
     justify-content: center;
     align-items: center; 
-
 `;
 
 export const List = styled.li`
     list-style-type: none;
-
 `;
-
 
 export const NavItem = styled(Link)`
     text-decoration: none;
@@ -35,9 +33,36 @@ export const About = styled(NavItem)`
 `;
 
 
+// Layout
+export const Layout = styled.article`
+    margin: 0 auto;
+`;
+
+// About Page
+export const AboutBack = styled.div`
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    
+`;
+
+export const Headshot = styled.img`
+    border-radius: 50%;
+    border: 3px inset #ccc;
+    width: 300px;
+    height: 300px;
+`;
 
 
 
+
+
+
+
+// Projects Page
 export const Card = styled.section`
     max-width: 400px;
     border: 1px inset #8bd1d3;
