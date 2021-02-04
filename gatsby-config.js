@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Karen Lobin Perkins`,
-    description: ``,
+    description: `The work, life, and times of Karen Lobin Perkins' developer journey.`,
     author: `@23carnies`,
   },
   plugins: [
@@ -12,6 +12,21 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Warnes`,
+            variants: [`400`],
+          },
+          {
+            family: `Quicksand`,
+            variants: [`300`, `400`, `500`, `600`, `700`]
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
