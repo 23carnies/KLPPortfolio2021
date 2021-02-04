@@ -1,7 +1,7 @@
 // import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import * as S from "./StyledComponents/StyledComponents"
+import * as S from "./styledComponents"
 
 const Header = ({ siteTitle }) => (
   

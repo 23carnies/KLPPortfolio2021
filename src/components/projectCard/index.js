@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as S from '../StyledComponents/StyledComponents';
+import * as S from '../styledComponents';
 
 const ProjectCard = ({ title, description, image, openLink, gitLink }) => {
     return ( 

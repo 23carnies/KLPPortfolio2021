@@ -105,3 +105,27 @@ export const BTN = styled.button`
     `}
 `;
 
+// Footer
+export const Footer = styled.footer`
+    background: #000;
+    display:flex;
+    justify-content: center;
+    max-height: 150px;
+`;
+
+export const FootDiv = styled.div`
+    background: ${({bkColor}) => ((bkColor === 'git') ? '#6e5494' : (bkColor === 'link') ? '#0072b1' : '#ed2224')};
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    `;
+
+export const FootP = styled.p`
+    color: #fff;
+    margin: 100px 30px 0 auto;
+    /* padding-top: 70%; */
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import headshot from '../images/headshot.png';
-import * as S from '../components/StyledComponents/StyledComponents'
+import * as S from '../components/styledComponents'
 // import styled from 'styled-components'
 
 const About = () => {
