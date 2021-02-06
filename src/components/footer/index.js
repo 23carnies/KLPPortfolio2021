@@ -46,9 +46,9 @@ const LgPDF = () => {
 const Footer = () => {
     return ( 
         <S.Footer>
-          <a role="link" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
-          <a role="link" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
-          <a role="link" target="_blank" href="http://karenlobinperkins.com/karenlobinperkins.pdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
+          <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
+          <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
+          <a rel="noreferrer" target="_blank" href="http://karenlobinperkins.com/karenlobinperkins.pdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
           <S.FootP>
             © {new Date().getFullYear()} Karen Lobin Perkins
             {/* , Built with {` `} */}

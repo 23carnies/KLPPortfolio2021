@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectCard from '../components/projectCard';
-
+import * as S from '../components/styledComponents'
 
 class Projects extends Component {
     state = { 
@@ -51,7 +51,7 @@ class Projects extends Component {
      }
     render() { 
         return ( 
-            <>
+            <S.Layout>
             {this.state.projects.map((project, idx) =>
                 <ProjectCard 
                     key={idx}
@@ -62,7 +62,7 @@ class Projects extends Component {
                     gitLink={project.gitLink}
                 />
             )}
-            </>
+            </S.Layout>
          );
     }
 }

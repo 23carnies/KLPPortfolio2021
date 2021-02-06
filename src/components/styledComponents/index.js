@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
-import imgPath from '../../images/chinese-times-square.jpg'
+// import imgPath from '../../images/chinese-times-square.jpg'
 
 // Header 
 export const Header = styled.header`
     background: #000;
+    height: 200px;
 `;
 
 export const Nav = styled.nav`
@@ -12,14 +13,15 @@ export const Nav = styled.nav`
     /* flex-direction: row; */
     /* justify-content: center; */
     align-items: center; 
-    height: 150px;
+    height: 80px;
 `;
 
 export const Effect = styled.div`
     background: #000;
     overflow: hidden;
+    height: 100px;
     padding: 30px;
-    margin-left: ${({type}) => (type === 'about' ? 'auto' : '0')};
+    /* margin-left: ${({type}) => (type === 'about' ? 'auto' : '0')}; */
 
     filter: brightness(200%)
 
@@ -29,25 +31,34 @@ export const Effect = styled.div`
 `;
 
 export const NavItem = styled(Link)`
+    margin: 0 auto;
     text-decoration: none;
     font-family: 'Warnes';
     font-size: 30px;
     color: white;
     text-transform: uppercase;
-
+    padding: 0 20px;
     `;
 
-export const Name = styled(NavItem)`
+export const Name = styled(Link)`
+    text-align: center;
+    font-family: 'Warnes';
+    font-size: 70px;
+    width: 50vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    left: 25%;
+
     &:before {
         content: 'Karen Lobin Perkins';
-        position: absolute;
         mix-blend-mode: difference;
-
+        position: absolute;
         filter: blur(3px)
     }
 `;
 
-export const About = styled(NavItem)`
+/* export const About = styled(NavItem)`
     &:before {
         content: 'About';
         position: absolute;
@@ -82,7 +93,7 @@ export const Blogs = styled(NavItem)`
 
         filter: blur(3px)
     }
-`;
+`; */
 
 export const Gradient = styled.div`
     background: linear-gradient(120deg, rgba(6,227,250,1) 5%, rgba(229, 151,64,1) 96%);
@@ -163,7 +174,7 @@ export const Pgraph = styled.p`
     color: #96439d;
 `;
 
-export const htwo = styled.h2`
+export const HTwo = styled.h2`
     font: 700 36px 'Roboto Mono', monospace;
     line-height: 54px;
     color: white;
