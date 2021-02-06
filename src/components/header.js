@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
         <S.Gradient></S.Gradient>
         <S.Dodge></S.Dodge>
       </S.Effect> */}
-      <S.NavItem to="/about">About</S.NavItem>
+      <S.NavItem type="about" to="/about">About</S.NavItem>
       <S.NavItem to="/projects">Projects</S.NavItem>
       <S.NavItem to="/contact">Contact</S.NavItem>
     </S.Nav>

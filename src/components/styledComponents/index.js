@@ -21,7 +21,6 @@ export const Effect = styled.div`
     overflow: hidden;
     height: 100px;
     padding: 30px;
-    /* margin-left: ${({type}) => (type === 'about' ? 'auto' : '0')}; */
 
     filter: brightness(200%)
 
@@ -31,14 +30,15 @@ export const Effect = styled.div`
 `;
 
 export const NavItem = styled(Link)`
-    margin: 0 auto;
+    /* margin: 0 auto; */
     text-decoration: none;
     font-family: 'Warnes';
     font-size: 30px;
     color: white;
     text-transform: uppercase;
     padding: 0 20px;
-    `;
+    margin-left: ${({type}) => (type === 'about' ? 'auto' : '0')};
+`;
 
 export const Name = styled(Link)`
     text-align: center;
