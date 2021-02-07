@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
+import { FlexCenter } from '../utilities';
 // import imgPath from '../../images/chinese-times-square.jpg'
 
 // Header 
@@ -9,10 +10,7 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-    display: flex;
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    align-items: center; 
+    ${FlexCenter};
     height: 80px;
 `;
 
@@ -135,10 +133,7 @@ export const Layout = styled.article`
 // About Page
 export const AboutBack = styled.div`
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    ${FlexCenter({dir:'column'})};
     background: purple;
     
 `;
@@ -158,18 +153,15 @@ export const Headshot = styled.img`
 
 // Projects Page
 
+// row-wrap is not working here
 export const CardGroup = styled.section`
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    ${FlexCenter({wrap:'wrap'})};
     justify-content: center;
 `;
 
 
 export const Card = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    ${FlexCenter({dir:'column'})};
     margin: 20px;
     padding: 20px;
     max-width: 400px;
@@ -217,8 +209,7 @@ export const BTN = styled.button`
 // Footer
 export const Footer = styled.footer`
     background: #000;
-    display:flex;
-    justify-content: center;
+    ${FlexCenter};
     max-height: 150px;
 `;
 
@@ -227,9 +218,7 @@ export const FootDiv = styled.div`
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${FlexCenter};
     margin: 30px;
     `;
 

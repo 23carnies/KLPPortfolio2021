@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 export const FlexCenter = ({dir = 'row', wrap = 'no wrap'}) => {
     return css`
     display: flex;
