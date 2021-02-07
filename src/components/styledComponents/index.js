@@ -157,46 +157,61 @@ export const Headshot = styled.img`
 
 
 // Projects Page
-export const Card = styled.section`
+
+export const CardGroup = styled.section`
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+`;
+
+
+export const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
     max-width: 400px;
     border: 1px inset #8bd1d3;
+    border-radius: 70px 3px 70px 3px;
     background-color: #cdf5db;
 `;
 
 export const Image = styled.img`
     max-width: 225px;
     border: 1px inset #8bd1d3;
+    border-radius: 5px;
 `;
 
 export const Pgraph = styled.p`
-    font: 400 18px 'Roboto Mono', monospace;
+    font: 400 18px 'Quicksand', sans-serif;
+    text-align: center;
     line-height: 24px;
+    margin: 5px;
     color: #96439d;
 `;
 
 export const HTwo = styled.h2`
     font: 700 36px 'Roboto Mono', monospace;
+    text-align: center;
     line-height: 54px;
+    margin: 5px;
     color: white;
 `;
 
 export const BTN = styled.button`
-    width: 75px;
+    width: 100px;
     height: 50px;
-    
-    ${props => props.open && css`
-        color: white;
-        background-color: #390164;
-        border: 1px inset #8bd1d3;
-    
-    `}
+    margin: 10px;
 
-    ${props => props.git && css`
-        color: #390164;
-        background-color: white;
-        border: 1px inset #8bd1d3;
-    
-    `}
+    border: 1px inset #8bd1d3;
+    border-radius: 5px;
+    font: 600 18px 'Quicksand', sans-serif;
+
+    color: ${({type}) => (type === 'open' ? 'white' : '#390164')};
+    background: ${({type}) => (type === 'open' ? '#390164' : 'white')};
+
 `;
 
 // Footer
