@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
 import { FlexCenter } from '../utilities';
+import * as c from '../utilities/Colors';
 // import imgPath from '../../images/chinese-times-square.jpg'
 
 // Header 
@@ -134,7 +135,7 @@ export const Layout = styled.article`
 export const AboutBack = styled.div`
     width: 100vw;
     ${FlexCenter({dir:'column'})};
-    background: purple;
+    background: ${c.violet};
     
 `;
 
@@ -156,7 +157,7 @@ export const Headshot = styled.img`
 // row-wrap is not working here
 export const CardGroup = styled.section`
     ${FlexCenter({wrap:'wrap'})};
-    justify-content: center;
+    background: ${c.pine};
 `;
 
 
@@ -165,14 +166,14 @@ export const Card = styled.div`
     margin: 20px;
     padding: 20px;
     max-width: 400px;
-    border: 1px inset #8bd1d3;
+    border: 1px inset ${c.mauve};
     border-radius: 70px 3px 70px 3px;
-    background-color: #cdf5db;
+    background: ${c.teal};
 `;
 
 export const Image = styled.img`
     max-width: 225px;
-    border: 1px inset #8bd1d3;
+    border: 1px inset ${c.mauve};
     border-radius: 5px;
 `;
 
@@ -181,7 +182,7 @@ export const Pgraph = styled.p`
     text-align: center;
     line-height: 24px;
     margin: 5px;
-    color: #96439d;
+    color: ${c.white};
 `;
 
 export const HTwo = styled.h2`
@@ -189,7 +190,7 @@ export const HTwo = styled.h2`
     text-align: center;
     line-height: 54px;
     margin: 5px;
-    color: white;
+    color: ${c.white};
 `;
 
 export const BTN = styled.button`
@@ -197,12 +198,12 @@ export const BTN = styled.button`
     height: 50px;
     margin: 10px;
 
-    border: 1px inset #8bd1d3;
+    border: 1px inset ${c.mauve};
     border-radius: 5px;
     font: 600 18px 'Quicksand', sans-serif;
 
-    color: ${({type}) => (type === 'open' ? 'white' : '#390164')};
-    background: ${({type}) => (type === 'open' ? '#390164' : 'white')};
+    color: ${({type}) => (type === 'open' ? `${c.white}` : `${c.violet}`)};
+    background: ${({type}) => (type === 'open' ? `${c.violet}` : `${c.white}`)};
 
 `;
 
