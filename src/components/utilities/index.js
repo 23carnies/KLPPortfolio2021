@@ -1,8 +1,6 @@
-export const FlexCenter = ({dir = 'row', wrap = 'no wrap'}) => {
-    return css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: ${dir};
-    flex-wrap: ${wrap};
-`};
+export * from './Borders';
+export * from './Breakpoints';
+export * from './Colors';
+export * from './Elevations';
+export * from './Positions';
+export * from './Type';
