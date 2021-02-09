@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
 import { FlexCenter } from '../utilities';
 import * as c from '../utilities/Colors';
+import * as b from '../utilities/Borders';
+
 // import imgPath from '../../images/chinese-times-square.jpg'
 
 // Header 
@@ -141,7 +143,7 @@ export const AboutBack = styled.div`
 
 export const Headshot = styled.img`
     border-radius: 50%;
-    border: 3px inset #ccc;
+    border: ${b.imgBorder};
     width: 300px;
     height: 300px;
 `;
@@ -166,14 +168,14 @@ export const Card = styled.div`
     margin: 20px;
     padding: 20px;
     max-width: 400px;
-    border: 1px inset ${c.mauve};
+    border: ${b.cardBorder};
     border-radius: 70px 3px 70px 3px;
     background: ${c.teal};
 `;
 
 export const Image = styled.img`
     max-width: 225px;
-    border: 1px inset ${c.mauve};
+    border: ${b.cardBorder};
     border-radius: 5px;
 `;
 
@@ -198,7 +200,7 @@ export const BTN = styled.button`
     height: 50px;
     margin: 10px;
 
-    border: 1px inset ${c.mauve};
+    border: ${b.cardBorder};
     border-radius: 5px;
     font: 600 18px 'Quicksand', sans-serif;
 
