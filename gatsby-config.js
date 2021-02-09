@@ -13,21 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Warnes`,
-            variants: [`400`],
-          },
-          {
-            family: `Quicksand`,
-            variants: [`300`, `400`, `500`, `600`, `700`]
-          }
-        ]
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
