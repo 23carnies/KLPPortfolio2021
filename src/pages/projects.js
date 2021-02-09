@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProjectCard from '../components/projectCard';
 import Layout from '../components/layout';
+import { CardGroup } from '../components/styledComponents'
 
 class Projects extends Component {
     state = { 
@@ -52,16 +53,19 @@ class Projects extends Component {
     render() { 
         return ( 
             <Layout>
-            {this.state.projects.map((project, idx) =>
-                <ProjectCard 
-                    key={idx}
-                    title={project.title}
-                    description={project.description}
-                    image={project.image}
-                    openLink={project.openLink}
-                    gitLink={project.gitLink}
-                />
-            )}
+                <CardGroup>
+                {this.state.projects.map((project, idx) =>
+                    <ProjectCard 
+                        key={idx}
+                        title={project.title}
+                        description={project.description}
+                        image={project.image}
+                        openLink={project.openLink}
+                        gitLink={project.gitLink}
+                    />
+                )}
+
+                </CardGroup>
             </Layout>
          );
     }
