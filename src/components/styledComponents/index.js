@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { FlexCenter } from '../utilities';
 import * as c from '../utilities/Colors';
 import * as b from '../utilities/Borders';
+import * as t from '../utilities/Type';
 
 // import imgPath from '../../images/chinese-times-square.jpg'
 
@@ -33,8 +34,7 @@ export const Effect = styled.div`
 export const NavItem = styled(Link)`
     /* margin: 0 auto; */
     text-decoration: none;
-    font-family: 'Warnes';
-    font-size: 30px;
+    font: ${t.navItem};
     color: white;
     text-transform: uppercase;
     padding: 0 20px;
@@ -43,8 +43,7 @@ export const NavItem = styled(Link)`
 
 export const Name = styled(Link)`
     text-align: center;
-    font-family: 'Warnes';
-    font-size: 70px;
+    font: ${t.nameplate};
     width: 50vw;
     text-transform: uppercase;
     text-decoration: none;
@@ -146,6 +145,33 @@ export const Headshot = styled.img`
     border: ${b.imgBorder};
     width: 300px;
     height: 300px;
+`;
+
+export const Text = styled.p`
+    font: ${t.text};
+    max-width: 85%;
+`;
+
+export const Title = styled.h1`
+    font: ${t.title};
+    overflow: hidden;
+    border-right: ${c.teal};
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation: 
+        typing 3.5s steps()(40, end),
+        blink-caret .75s step-end infinite;
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: ${c.teal} }
+    }
 `;
 
 
