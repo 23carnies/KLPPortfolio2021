@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
-import { FlexCenter } from '../utilities';
+import { FlexCenter, box_shadow3 } from '../utilities';
 import * as c from '../utilities/Colors';
 import * as b from '../utilities/Borders';
 import * as t from '../utilities/Type';
 
-// import imgPath from '../../images/chinese-times-square.jpg'
 
 // Header 
 export const Header = styled.header`
@@ -130,6 +129,7 @@ export const Dodge = styled.div`
 // Layout
 export const Layout = styled.article`
     margin: 0 auto;
+    height: 100vh;
 `;
 
 // About Page
@@ -186,6 +186,8 @@ export const Title = styled.h1`
 export const CardGroup = styled.section`
     ${FlexCenter({wrap:'wrap'})};
     background: ${c.pine};
+    width: 100%;
+    height: 100vh;
 `;
 
 
@@ -193,10 +195,12 @@ export const Card = styled.div`
     ${FlexCenter({dir:'column'})};
     margin: 20px;
     padding: 20px;
-    max-width: 400px;
+    max-width: 370px;
+    height: 500px;
     border: ${b.cardBorder};
     border-radius: 70px 3px 70px 3px;
     background: ${c.teal};
+    box-shadow: ${box_shadow3};
 `;
 
 export const Image = styled.img`
