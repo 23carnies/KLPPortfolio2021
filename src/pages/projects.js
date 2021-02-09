@@ -14,8 +14,8 @@ class Projects extends Component {
                 gitLink: 'https://github.com/23carnies/MeetYourMakerCoupled',
             },
             {
-                title: 'Despejado | Clear',
-                description: 'A bilingual weather app built in React, utilizing two APIs and designed in SCSS. A passion project built in December 2020.',
+                title: 'Despejado',
+                description: 'A bilingual weather app built in React, utilizing two APIs and designed in Sass. A passion project built in December 2020.',
                 image: 'https://i.imgur.com/G8S7QY5.jpg',
                 openLink: 'http://despejado.surge.sh/',
                 gitLink: 'https://github.com/23carnies/despejado',
