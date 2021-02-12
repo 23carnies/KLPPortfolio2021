@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby'
-import { FlexCenter, box_shadow3 } from '../utilities';
+import { Flex, box_shadow3 } from '../utilities';
 import * as c from '../utilities/Colors';
 import * as b from '../utilities/Borders';
 import * as t from '../utilities/Type';
@@ -13,7 +13,7 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-    ${FlexCenter};
+    ${Flex};
     height: 80px;
 `;
 
@@ -39,47 +39,11 @@ export const Layout = styled.article`
     /* height: 100vh; */
 `;
 
-// About Page
-export const AboutBack = styled.div`
-    width: 100vw;
-    ${FlexCenter({dir:'column'})};
-    background: ${c.violet};
-    
-`;
 
-export const Headshot = styled.img`
-    border-radius: 50%;
-    border: ${b.imgBorder};
-    width: 300px;
-    height: 300px;
-`;
 
-export const Text = styled.p`
-    font: ${t.text};
-    max-width: 85%;
-`;
 
-export const Title = styled.h1`
-    font: ${t.title};
-    overflow: hidden;
-    border-right: ${c.teal};
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .1em;
-    animation: 
-        typing 3.5s steps()(40, end),
-        blink-caret .75s step-end infinite;
 
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
 
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: ${c.teal} }
-    }
-`;
 
 
 
@@ -91,7 +55,7 @@ export const Title = styled.h1`
 
 // row-wrap is not working here
 export const CardGroup = styled.section`
-    ${FlexCenter({wrap:'wrap'})};
+    ${Flex({fw:'wrap'})};
     background: ${c.pine};
     width: 100%;
     height: 100vh;
@@ -99,7 +63,7 @@ export const CardGroup = styled.section`
 
 
 export const Card = styled.div`
-    ${FlexCenter({dir:'column'})};
+    ${Flex({fd:'column'})};
     margin: 20px;
     padding: 20px;
     max-width: 370px;
@@ -149,7 +113,7 @@ export const BTN = styled.button`
 // Footer
 export const Footer = styled.footer`
     background: #000;
-    ${FlexCenter};
+    ${Flex};
     max-height: 150px;
 `;
 
@@ -158,7 +122,7 @@ export const FootDiv = styled.div`
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    ${FlexCenter};
+    ${Flex};
     margin: 30px;
     `;
 
