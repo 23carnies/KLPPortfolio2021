@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import * as t from '../components/utilities/Type';
 import { Link } from "gatsby"
 
-const nameplate = ({ siteTitle }) => {
+const nameplate = () => {
     
     return ( 
         <header style={{width: '100vw'}}>
             <Effect>
-                <Name to="https://www.linkedin.com/in/karen-lobin-perkins/" >{siteTitle}</Name>
+                <Name to="https://www.linkedin.com/in/karen-lobin-perkins/" >Karen Lobin Perkins</Name>
                 <Gradient></Gradient>
                 <Dodge></Dodge>
             </Effect>
