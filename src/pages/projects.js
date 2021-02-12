@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 import Layout from '../components/layout';
 import { CardGroup } from '../components/styledComponents'
@@ -53,6 +54,7 @@ class Projects extends Component {
     render() { 
         return ( 
             <Layout>
+                <Header />
                 <CardGroup>
                 {this.state.projects.map((project, idx) =>
                     <ProjectCard 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import Header from '../components/header';
 import headshot from '../images/headshot.png';
 import * as S from '../components/styledComponents'
 // import styled from 'styled-components'
@@ -7,6 +8,7 @@ import * as S from '../components/styledComponents'
 const About = () => {
     return ( 
         <Layout>
+            <Header />
             <S.AboutBack>
                 <S.Title>Hi! I'm Karen</S.Title>
                 <S.Headshot src={headshot} alt="Karen in business attire"/>
