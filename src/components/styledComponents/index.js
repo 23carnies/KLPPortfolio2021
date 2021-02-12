@@ -17,18 +17,7 @@ export const Nav = styled.nav`
     height: 80px;
 `;
 
-export const Effect = styled.div`
-    background: #000;
-    overflow: hidden;
-    height: 150px;
-    padding: 30px;
 
-    filter: brightness(200%)
-
-    ${props => props.margin && css`
-        margin-left: auto;
-    `}
-`;
 
 export const NavItem = styled(Link)`
     /* margin: 0 auto; */
@@ -40,88 +29,6 @@ export const NavItem = styled(Link)`
     margin-left: ${({type}) => (type === 'about' ? 'auto' : '0')};
 `;
 
-export const Name = styled(Link)`
-    text-align: center;
-    font: ${t.nameplate};
-    width: 50vw;
-    text-transform: uppercase;
-    text-decoration: none;
-    position: absolute;
-    left: 25%;
-
-    &:before {
-        content: 'Karen Lobin Perkins';
-        mix-blend-mode: difference;
-        position: absolute;
-        filter: blur(3px)
-    }
-`;
-
-/* export const About = styled(NavItem)`
-    &:before {
-        content: 'About';
-        position: absolute;
-        mix-blend-mode: difference;
-
-        filter: blur(3px)
-    }
-`;
-export const Projects = styled(NavItem)`
-    &:before {
-        content: 'Projects';
-        position: absolute;
-        mix-blend-mode: difference;
-
-        filter: blur(3px)
-    }
-`;
-export const Contact = styled(NavItem)`
-    &:before {
-        content: 'Contact';
-        position: absolute;
-        mix-blend-mode: difference;
-
-        filter: blur(3px)
-    }
-`;
-export const Blogs = styled(NavItem)`
-    &:before {
-        content: 'Blogs';
-        position: absolute;
-        mix-blend-mode: difference;
-
-        filter: blur(3px)
-    }
-`; */
-
-export const Gradient = styled.div`
-    background: linear-gradient(120deg, rgba(6,227,250,1) 5%, rgba(229, 151,64,1) 96%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    mix-blend-mode: multiply;
-`;
-
-export const Dodge = styled.div`
-    background: radial-gradient(circle, white, black 55%) center / 25% 25%;
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-
-    mix-blend-mode: color-dodge;
-    animation: dodge-area 14s linear infinite;
-
-    @keyframes dodge-area {
-        to {
-            transform: translate(50%, 50%);
-        }
-    }
-`;
 
 
 
@@ -129,7 +36,7 @@ export const Dodge = styled.div`
 // Layout
 export const Layout = styled.article`
     margin: 0 auto;
-    height: 100vh;
+    /* height: 100vh; */
 `;
 
 // About Page
