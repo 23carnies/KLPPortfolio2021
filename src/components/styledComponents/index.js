@@ -9,7 +9,7 @@ import * as t from '../utilities/Type';
 // Header 
 export const Header = styled.header`
     background: #000;
-    height: 200px;
+    /* height: 200px; */
 `;
 
 export const Nav = styled.nav`
@@ -20,7 +20,7 @@ export const Nav = styled.nav`
 export const Effect = styled.div`
     background: #000;
     overflow: hidden;
-    height: 100px;
+    height: 150px;
     padding: 30px;
 
     filter: brightness(200%)
@@ -114,7 +114,7 @@ export const Dodge = styled.div`
     bottom: 0;
 
     mix-blend-mode: color-dodge;
-    animation: dodge-area 10s linear infinite;
+    animation: dodge-area 14s linear infinite;
 
     @keyframes dodge-area {
         to {
