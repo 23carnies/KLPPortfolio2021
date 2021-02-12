@@ -4,7 +4,6 @@ import React from "react"
 import * as S from "./styledComponents"
 
 const Header = () => (
-  
   <S.Header>
     <S.Nav>
       <S.NavItem type="about" to="/about">About</S.NavItem>
