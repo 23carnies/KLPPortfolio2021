@@ -1,18 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Flex } from '../components/utilities';
 import { FiGithub } from '@react-icons/all-files/fi/FiGithub'
 import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { FaRegFilePdf } from '@react-icons/all-files/fa/FaRegFilePdf'
 import { IconContext } from '@react-icons/all-files/'
-import * as S from './styledComponents'
 
 const LgGithub = () => {
   return ( 
     <IconContext.Provider
       value={{ size: '55px', color: '#fff' }}
     >
-      <S.FootDiv bkColor="git">
+      <FootDiv bkColor="git">
         <FiGithub />
-      </S.FootDiv>
+      </FootDiv>
     </IconContext.Provider>
    );
 }
@@ -22,9 +23,9 @@ const LgLinkedIn = () => {
     <IconContext.Provider
       value={{ size: '55px', color: '#fff' }}
     >
-      <S.FootDiv bkColor="link">
+      <FootDiv bkColor="link">
         <AiOutlineLinkedin />
-      </S.FootDiv>
+      </FootDiv>
     </IconContext.Provider>
    );
 }
@@ -35,9 +36,9 @@ const LgPDF = () => {
       value={{ color: '#fff', size: '55px' }}
       
     >
-      <S.FootDiv>
+      <FootDiv>
         <FaRegFilePdf />
-      </S.FootDiv>
+      </FootDiv>
     </IconContext.Provider>
    );
 }
@@ -45,16 +46,37 @@ const LgPDF = () => {
 
 const Footer = () => {
     return ( 
-        <S.Footer>
+        <Foot>
           <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
           <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
-          <a rel="noreferrer" target="_blank" href="http://karenlobinperkins.com/karenlobinperkins.pdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
-          <S.FootP>
+          <a rel="noreferrer" target="_blank" href="http://karenlobinperkincom/karenlobinperkinpdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
+          <FootP>
             © {new Date().getFullYear()} Karen Lobin Perkins
             {/* , Built with {` `} */}
-          </S.FootP>
-        </S.Footer>
+          </FootP>
+        </Foot>
     );
 }
  
 export default Footer;
+
+const Foot = styled.footer`
+    background: #000;
+    ${Flex};
+    max-height: 150px;
+`;
+
+const FootDiv = styled.div`
+    background: ${({bkColor}) => ((bkColor === 'git') ? '#6e5494' : (bkColor === 'link') ? '#0072b1' : '#ed2224')};
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    ${Flex};
+    margin: 30px;
+    `;
+
+const FootP = styled.p`
+    color: #fff;
+    margin: 100px 30px 0 auto;
+    /* padding-top: 70%; */
+`;
