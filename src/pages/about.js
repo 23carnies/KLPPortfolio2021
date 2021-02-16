@@ -19,7 +19,7 @@ const About = () => {
                     <Text>From my earliest memories, I’ve always loved to learn. I taught myself to play guitar and built a car from scratch with my father as a teenager. I’ve studied multiple languages and I picked up HTML and CSS in college. For years I built sites for family and friends until deciding to pivot my career to software development. </Text>
                     <Text>A recent graduate of the Software Engineering Immersive at General Assembly, I am experienced in modern web design. Skilled in pure CSS and several frameworks, I build alluring sites and apps with great functionality.</Text>
                     <Text>I have a passion for rowing, a sport of focus and dedication. I bring these skills with me to every project. Passionate about languages, travel, and fitness, I look to make a positive difference in the world with software development.</Text>
-
+                    <Text>I want to see the world, and see what positive change I can be in it.</Text>
                 </div>
             </AboutBack>
         </Layout>
@@ -28,7 +28,7 @@ const About = () => {
  
 export default About;
 
-// About Page
+
 const AboutBack = styled.div`
     width: 100vw;
     ${Flex({ai:'flex-start'})};
@@ -44,10 +44,12 @@ const Title = styled.h1`
     border-right: ${teal};
     white-space: nowrap;
     margin: 0 auto;
+    border-bottom: 5px dotted ${teal};
+    color: ${teal};
     letter-spacing: .1em;
     animation: 
         typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+        blink-caret .75s step-end;
 
     @keyframes typing {
         from { width: 0 }
