@@ -1,36 +1,16 @@
 import React, { useState,  } from 'react';
-// import { render } from 'react-dom';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 
 import { Flex, teal, white, violet, mauve, cardBorder, box_shadow3 } from '../components/utilities';
 
-// TODO: Write hook for change card front/back
-
 const ProjectCard = ({ title, description, image, openLink, gitLink }) => {
     const [cardFlip, setCardFlip] = useState(false);
     const { transform, opacity } = useSpring({
-        opacity: (cardFlip === true) ? 1 : 0,
-        transform: `perspective(800px) rotateX(${(cardFlip === true) ? 180 : 0}deg)`,
+        opacity: (cardFlip === false) ? 1 : 0,
+        transform: `perspective(600px) rotateX(${(cardFlip === false) ? 180 : 0}deg)`,
         config: { mass: 4, tension: 300, friction: 39 }
     })
-
-    // const showCardFront = () => {
-    //     return (<CardFront/>)
-    // }
-    // const showCardBack = () => {
-    //     return (<CardBack/>)
-    // }
-
-    // const handleChange = (e) => {
-    //     setCardFlip(!cardFlip);
-    // }
-
-    // useEffect(() => {
-    //     console.log(cardFlip);
-    //     cardFlip === false && showCardFront();
-    //     cardFlip === true && showCardBack();
-    // }, [cardFlip])
 
     return ( 
         <div onClick={() => setCardFlip(state => !state)}>

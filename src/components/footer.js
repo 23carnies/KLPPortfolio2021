@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex } from '../components/utilities';
+import { Flex, box_shadow2 } from '../components/utilities';
 import { FiGithub } from '@react-icons/all-files/fi/FiGithub'
 import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { FaRegFilePdf } from '@react-icons/all-files/fa/FaRegFilePdf'
@@ -66,9 +66,10 @@ const Foot = styled.footer`
     max-height: 150px;
 `;
 
-const FootDiv = styled.div`
+export const FootDiv = styled.div`
     background: ${({bkColor}) => ((bkColor === 'git') ? '#6e5494' : (bkColor === 'link') ? '#0072b1' : '#ed2224')};
     border-radius: 50%;
+    box-shadow: ${box_shadow2};
     width: 100px;
     height: 100px;
     ${Flex};
