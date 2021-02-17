@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #3f120a } 
+		.shp1 { fill: #de4729 } 
+		.shp2 { fill: #ffffff } 
+		.txt3 { font-size: 80px;fill: #b2a9a9;font-weight: 400;font-family: "Virgo01", "Virgo 01";text-anchor: middle } 
+	</style>
+	<path id="Background" class="shp0" d="M0 0L1080 0L1080 1920L0 1920L0 0Z" />
+	<g id="Border-left">
+		<g id="circs">
+			<path id="Layer" class="shp1" d="M232.83 67.95C232.83 30.08 201.63 0 163.76 0C125.88 0 95.8 30.08 95.8 67.95C95.8 106.94 125.88 137.02 163.76 137.02C201.63 137.02 232.83 106.94 232.83 67.95ZM232.83 613.81C232.83 575.94 201.63 544.75 163.76 544.75C125.88 544.75 95.8 575.94 95.8 613.81C95.8 651.69 125.88 681.77 163.76 681.77C201.63 681.77 232.83 651.69 232.83 613.81Z" />
+			<path id="Layer" class="shp2" d="M232.83 337.54C232.83 299.67 201.63 268.47 163.76 268.47C125.88 268.47 95.8 299.67 95.8 337.54C95.8 375.42 125.88 405.5 163.76 405.5C201.63 405.5 232.83 375.42 232.83 337.54ZM232.83 890.09C232.83 852.21 201.63 822.13 163.76 822.13C125.88 822.13 95.8 852.21 95.8 890.09C95.8 929.08 125.88 959.15 163.76 959.15C201.63 959.15 232.83 929.08 232.83 890.09Z" />
+			<path id="Layer" class="shp1" d="M304.12 590.42L310.81 613.81L304.12 590.42Z" />
+		</g>
+		<g id="circs">
+			<path id="Layer" class="shp1" d="M232.83 1179.4C232.83 1141.52 201.63 1111.44 163.76 1111.44C125.88 1111.44 95.8 1141.52 95.8 1179.4C95.8 1218.39 125.88 1248.46 163.76 1248.46C201.63 1248.46 232.83 1218.39 232.83 1179.4ZM232.83 1725.26C232.83 1687.38 201.63 1656.19 163.76 1656.19C125.88 1656.19 95.8 1687.38 95.8 1725.26C95.8 1763.13 125.88 1793.21 163.76 1793.21C201.63 1793.21 232.83 1763.13 232.83 1725.26Z" />
+			<path id="Layer" class="shp2" d="M232.83 1448.98C232.83 1411.11 201.63 1379.92 163.76 1379.92C125.88 1379.92 95.8 1411.11 95.8 1448.98C95.8 1486.86 125.88 1516.94 163.76 1516.94C201.63 1516.94 232.83 1486.86 232.83 1448.98ZM232.83 2001.53C232.83 1963.65 201.63 1933.57 163.76 1933.57C125.88 1933.57 95.8 1963.65 95.8 2001.53C95.8 2040.52 125.88 2070.6 163.76 2070.6C201.63 2070.6 232.83 2040.52 232.83 2001.53Z" />
+			<path id="Layer" class="shp1" d="M304.12 1701.86L310.81 1725.26L304.12 1701.86Z" />
+		</g>
+	</g>
+	<text id="ReactJS 	Node.js Git		Python  St" style="transform: matrix(1,0,0,1,540,78.734)" >
+		<tspan x="0" y="0" class="txt3">ReactJS 	Node.js Git		Python</tspan>
+		<tspan x="0" y="179.2" class="txt3">StyledComponents		a11y		MongoDB</tspan>
+		<tspan x="0" y="358.4" class="txt3">ExpressJS		Django		AWS-S3 HTML</tspan>
+		<tspan x="0" y="537.6" class="txt3">CSS		MongooseJS		GraphQL		API</tspan>
+		<tspan x="0" y="716.8" class="txt3">EJS Templating RESTful		Gatsby</tspan>
+		<tspan x="0" y="896" class="txt3">ReactSpring		PostgreSQL		Agile</tspan>
+		<tspan x="0" y="1075.2" class="txt3">JSON		Front-end		ReactJS	Git</tspan>
+		<tspan x="0" y="1254.4" class="txt3">Node.js		Python		a11y		ES6	</tspan>
+		<tspan x="0" y="1433.6" class="txt3">StyledComponents		MongoDB		</tspan>
+		<tspan x="0" y="1612.8" class="txt3">ExpressJS		Django		HTML		AWS</tspan>
+		<tspan x="0" y="1792" class="txt3">MongooseJS		CSS		Gatsby		JSON</tspan>
+		<tspan x="0" y="1881.6" class="txt3">GraphQL		API		RESTful		Agile</tspan>
+		<tspan x="0" y="1971.2" class="txt3">Front-end		PostGreSQL		NPM </tspan>
+		<tspan x="0" y="2060.8" class="txt3">React Spring ReactJS		No</tspan>
+		<tspan x="0" y="2150.4" class="txt3">Python 	a11y		MongoDB		Ex</tspan>
+		<tspan x="0" y="2240" class="txt3">Django		CSS		Graphql		APi</tspan>
+		<tspan x="0" y="2329.6" class="txt3">JSON		Front-end		EJS templ</tspan>
+		<tspan x="0" y="2419.2" class="txt3">MongooseJS		STyled Comp</tspan>
+		<tspan x="0" y="2508.8" class="txt3">RESTful		Gatsby		Git		Es6	</tspan>
+		<tspan x="0" y="2598.4" class="txt3">StyledComponents		EJS Temp</tspan>
+	</text>
+</svg>
