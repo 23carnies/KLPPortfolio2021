@@ -19,11 +19,14 @@ export default Header;
 
 const Head = styled.header`
     background: #000;
-    height: 170px;
+    /* height: 170px; */
 `;
 
 const Nav = styled.nav`
     ${Flex};
+    max-width: 1440px;
+    padding: 10px 0 0;
+    margin: 0 auto;
     height: 80px;
 `;
 
