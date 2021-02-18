@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, nameplate, white  } from '../components/utilities';
+import { Flex, nameplate, white, navItem  } from '../components/utilities';
 // import { Link } from "gatsby"
-import kpLogo from '../images/logo.png'
+import kpLogo from '../images/logo.svg'
 
 const Nameplate = () => {
     
@@ -11,9 +11,10 @@ const Nameplate = () => {
             <Logo src={kpLogo} alt="KP Phoenix Logo"/>
             <Effect>
                 <Name>Karen Lobin Perkins</Name>
-                <Gradient></Gradient>
-                <Dodge></Dodge>
-            </Effect>
+                <GradientName></GradientName>
+                <DodgeName></DodgeName>
+                </Effect>
+               <Title>Front End Engineer</Title>
         </Header>
      );
 }
@@ -28,26 +29,25 @@ const Header = styled.header`
 
 const Logo = styled.img`
     border-radius: 50%;
-    width: 200px;
+    width: 120px;
+    margin-right: 15px;
 `;
 
 const Effect = styled.div`
     background: #000;
     overflow: hidden;
-    height: 150px;
-    width: 100vw;
+    height: 120px;
+    width: 58vw;
     padding: 30px 0;
 
     filter: brightness(200%)
 `;
 
 const Name = styled.h1`
-    /* text-align: center; */
     font: ${nameplate};
     width: 100vw;
     color: ${white};
     text-transform: uppercase;
-    text-decoration: none;
     position: absolute;
 
     /* left: 20%; */
@@ -60,8 +60,13 @@ const Name = styled.h1`
     }
 `;
 
-const Gradient = styled.div`
-    /* background: linear-gradient(120deg, rgba(6,227,250,1) 5%, rgba(229, 151,64,1) 96%); */
+const Title = styled.h2`
+    font: ${navItem};
+    margin-left: 30px;
+    color: rgba(250, 237,7,1);
+`;
+
+const GradientName = styled.div`
     background: linear-gradient(120deg, rgba(192,0,1,1) 4%, rgba(250, 237,7,1) 86%);
     position: absolute;
     top: 0;
@@ -72,7 +77,7 @@ const Gradient = styled.div`
     mix-blend-mode: multiply;
 `;
 
-const Dodge = styled.div`
+const DodgeName = styled.div`
     background: radial-gradient(circle, #ffffd9, black 55%) center / 25% 25%;
     position: absolute;
     top: -100%;
@@ -89,4 +94,3 @@ const Dodge = styled.div`
         }
     }
 `;
-
