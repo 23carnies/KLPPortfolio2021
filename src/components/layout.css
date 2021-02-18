@@ -87,3 +87,7 @@ hr {
 *:after {
   box-sizing: inherit;
 }
+
+main {
+  margin: 0 auto;
+}

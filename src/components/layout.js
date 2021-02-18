@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
-import * as S from './styledComponents';
 
 import Header from "./header"
 import Footer from "./footer"
@@ -16,13 +15,11 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   
-
   return (
     <>
-      <S.Layout>
-        <main>{children}</main>
-        
-      </S.Layout>
+      <main>
+        {children}
+      </main>
       <Footer />
     </>
   )
@@ -33,3 +30,7 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+// const Layout = styled.article`
+//     margin: 0 auto;
+// `;
