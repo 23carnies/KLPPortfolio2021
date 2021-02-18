@@ -33,18 +33,18 @@ export default function ContactMe() {
 
 const Form = styled.form`
     ${Flex({fd:'column'})};
-    padding: 25px;
+    padding: 15px;
 
 `;
 
 const Input = styled.input`
     max-width: 750px;
-    width: ${({type}) => (type === 'submit') ? '25%' : '60%'};
+    width: ${({type}) => (type === 'submit') ? '20%' : '50%'};
     background: ${({type}) => (type === 'submit') ? `${teal}` : `${white}`};
     color: ${({type}) => (type === 'submit' ? `${white}` : `${grey}`)};
     font: ${label};
-    padding: 1.5%;
-    margin: 2%;
+    padding: 1%;
+    margin: 1.23%;
     border-radius: 8px;
     box-shadow: ${({type}) => (type === 'submit' ? `${box_shadow4}` : 'none')};
     
