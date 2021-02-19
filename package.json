@@ -24,7 +24,9 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-spring": "^8.0.27",
-    "styled-components": "^5.2.1"
+    "react-three-fiber": "^2.2.11",
+    "styled-components": "^5.2.1",
+    "three": "^0.125.2"
   },
   "devDependencies": {
     "prettier": "2.2.1"
