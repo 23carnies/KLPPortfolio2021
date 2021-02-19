@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, nameplate, white, navItem  } from '../components/utilities';
+import { Flex, nameplate, white, yellow2, yellow1, red2, navItem  } from '../components/utilities';
 // import { Link } from "gatsby"
 import kpLogo from '../images/logo.svg'
 
@@ -63,11 +63,11 @@ const Name = styled.h1`
 const Title = styled.h2`
     font: ${navItem};
     margin-left: 30px;
-    color: rgba(250, 237,7,1);
+    color: ${yellow1};
 `;
 
 const GradientName = styled.div`
-    background: linear-gradient(120deg, rgba(192,0,1,1) 4%, rgba(250, 237,7,1) 86%);
+    background: linear-gradient(120deg, ${red2} 4%, ${yellow2} 86%);
     position: absolute;
     top: 0;
     left: 0;
@@ -78,7 +78,7 @@ const GradientName = styled.div`
 `;
 
 const DodgeName = styled.div`
-    background: radial-gradient(circle, #ffffd9, black 55%) center / 25% 25%;
+    background: radial-gradient(circle, ${white}, black 55%) center / 25% 25%;
     position: absolute;
     top: -100%;
     left: -100%;

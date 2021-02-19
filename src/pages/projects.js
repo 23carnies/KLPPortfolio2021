@@ -4,7 +4,7 @@ import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';
-import { Flex, pine, violet, title } from '../components/utilities';
+import { Flex, mauve, orange3, title } from '../components/utilities';
 
 class Projects extends Component {
     state = { 
@@ -70,9 +70,7 @@ class Projects extends Component {
                             gitLink={project.gitLink}
                         />
                     )}
-
                     </CardGroup>
-
                 </ProjectBack>
             </Layout>
          );
@@ -83,13 +81,15 @@ export default Projects;
 
 const ProjectBack = styled.article`
     ${Flex({fd:'column'})}
-    background: ${pine};
+    background: ${orange3};
+    padding: 0 0 8%;
 `;
 
 const Headline = styled.h4`
     font: ${title};
-    color: ${violet};
-    border-bottom: 5px dotted ${violet};
+    color: ${mauve};
+    border-bottom: 5px dotted ${mauve};
+    margin: 0;
 `;
 
 const CardGroup = styled.section`

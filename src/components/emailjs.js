@@ -2,7 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 
-import { Flex, white, grey, teal, label, box_shadow4, btn_active } from './utilities';
+import { Flex, yellow, orange, blue, black, grey, pine, teal, mauve, violet, white, label, box_shadow4, btn_active } from './utilities';
 
 export default function ContactMe() {
 
@@ -34,18 +34,19 @@ export default function ContactMe() {
 const Form = styled.form`
     ${Flex({fd:'column'})};
     padding: 15px;
+    width: 100%;
 
 `;
 
 const Input = styled.input`
     max-width: 750px;
-    width: ${({type}) => (type === 'submit') ? '20%' : '50%'};
-    background: ${({type}) => (type === 'submit') ? `${teal}` : `${white}`};
-    color: ${({type}) => (type === 'submit' ? `${white}` : `${grey}`)};
+    width: ${({type}) => (type === 'submit') ? '13%' : '50%'};
+    background: ${({type}) => (type === 'submit') ? `${yellow}` : `${white}`};
+    color: ${({type}) => (type === 'submit' ? `${mauve}` : `${grey}`)};
     font: ${label};
     padding: 1%;
     margin: 1.23%;
-    border-radius: 8px;
+    border-radius: ${({type}) => (type === 'submit' ? '12px' : '5px')};
     box-shadow: ${({type}) => (type === 'submit' ? `${box_shadow4}` : 'none')};
     
     :hover {
