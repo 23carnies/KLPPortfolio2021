@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, box_shadow2 } from '../components/utilities';
+import { Flex, box_shadow2, white } from '../components/utilities';
 import { FiGithub } from '@react-icons/all-files/fi/FiGithub'
 import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { FaRegFilePdf } from '@react-icons/all-files/fa/FaRegFilePdf'
+import { BiMailSend } from '@react-icons/all-files/bi/BiMailSend';
 import { IconContext } from '@react-icons/all-files/'
 
-const LgGithub = () => {
+export const LgGithub = () => {
   return ( 
     <IconContext.Provider
-      value={{ size: '55px', color: '#fff' }}
+      value={{ size: '55px', color: `${white}` }}
     >
       <FootDiv bkColor="git">
         <FiGithub />
@@ -18,10 +19,10 @@ const LgGithub = () => {
    );
 }
  
-const LgLinkedIn = () => {
+export const LgLinkedIn = () => {
   return ( 
     <IconContext.Provider
-      value={{ size: '55px', color: '#fff' }}
+      value={{ size: '55px', color: `${white}` }}
     >
       <FootDiv bkColor="link">
         <AiOutlineLinkedin />
@@ -30,10 +31,10 @@ const LgLinkedIn = () => {
    );
 }
  
-const LgPDF = () => {
+export const LgPDF = () => {
   return ( 
     <IconContext.Provider
-      value={{ color: '#fff', size: '55px' }}
+      value={{ color: `${white}`, size: '55px' }}
       
     >
       <FootDiv>
@@ -41,6 +42,18 @@ const LgPDF = () => {
       </FootDiv>
     </IconContext.Provider>
    );
+}
+
+export const LgMail = () => {
+  return (
+    <IconContext.Provider 
+      value={{ size: '55px', color: `${white}` }}
+    >
+      <FootDiv>
+        <BiMailSend />
+      </FootDiv>
+    </IconContext.Provider>
+  )
 }
  
 
@@ -74,6 +87,7 @@ export const FootDiv = styled.div`
     height: 100px;
     ${Flex};
     margin: 30px;
+    border: 1px solid white;
     `;
 
 const FootP = styled.p`

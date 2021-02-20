@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
 import { Flex, yellow1, yellow3, orange2, orange3, violet, white, black, text, boldType } from '../components/utilities';
-import { FootDiv } from '../components/footer';
-import { ThreeD } from '../components/3d';
+import { FootDiv, LgGithub, LgLinkedIn, LgMail } from '../components/footer';
+import { ThreeD } from '../components/ThreeD';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,48 +12,6 @@ import SEO from "../components/seo";
 import Bird from '../images/phoenix.svg';
 import Flames from '../images/fire.svg';
 import background from '../images/skillsBackground.svg';
-
-import { FiGithub } from '@react-icons/all-files/fi/FiGithub';
-import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin';
-import { BiMailSend } from '@react-icons/all-files/bi/BiMailSend';
-import { IconContext } from '@react-icons/all-files/';
-
-
-const LgGithub = () => {
-  return ( 
-    <IconContext.Provider
-      value={{ size: '55px', color: `${white}` }}
-    >
-      <FootDiv bkColor="git">
-        <FiGithub />
-      </FootDiv>
-    </IconContext.Provider>
-   );
-}
- 
-const LgLinkedIn = () => {
-  return ( 
-    <IconContext.Provider
-      value={{ size: '55px', color: `${white}` }}
-    >
-      <FootDiv bkColor="link">
-        <AiOutlineLinkedin />
-      </FootDiv>
-    </IconContext.Provider>
-   );
-}
-
-const LgMail = () => {
-  return (
-    <IconContext.Provider 
-      value={{ size: '55px', color: `${white}` }}
-    >
-      <FootDiv>
-        <BiMailSend />
-      </FootDiv>
-    </IconContext.Provider>
-  )
-}
 
 const IndexPage = () => (
   <Layout>
