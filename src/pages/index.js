@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
-import { Flex, yellow1, yellow3, orange2, orange3, violet, white, black, text, boldType } from '../components/utilities';
+import { Flex, yellow1, yellow2, yellow3, orange2, orange1, violet, white, black, text, boldType } from '../components/utilities';
 import { FootDiv, LgGithub, LgLinkedIn, LgMail } from '../components/footer';
-import { ThreeD } from '../components/ThreeD';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,6 +11,42 @@ import SEO from "../components/seo";
 import Bird from '../images/phoenix.svg';
 import Flames from '../images/fire.svg';
 import background from '../images/skillsBackground.svg';
+
+import { Canvas, useLoader } from 'react-three-fiber';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
+const Box = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const ref = useRef();
+    
+    const color = isHovered ? `${orange1}` : `${yellow3}`;
+    
+    return ( 
+        <mesh rotation={[10,10,10]}>
+          <boxBufferGeometry attach="geometry" args={[2,2,2]}/>
+          <meshPhongMaterial 
+            flatShading={true}
+            roughness={1}
+            metalness={0.5}
+            shininess={100}
+            attach="material"
+            color={color}
+          />
+          console.log('text', )
+        </mesh>
+    );
+}
+ 
+const Scene = () => {
+    return ( 
+        <>
+            <ambientLight />
+            <pointLight intensity={0.5} position={[0,10,4]} />
+              <Box />
+            
+        </>
+     );
+}
 
 const IndexPage = () => (
   <Layout>
@@ -37,7 +72,9 @@ const IndexPage = () => (
         <Link to="/projects">
           <h3>Stuff I've Built</h3>
         </Link>
-          {/* <ThreeD /> */}
+        <Canvas style={{width: '90%'}}>
+          <Scene style={{width:'100%'}}/>
+        </Canvas>
         </Projects>
 
       {/* Contact Section */}
@@ -113,12 +150,13 @@ const Fire = styled.img`
 `;
 
 const Projects = styled(Section)`
+  ${Flex({fd:'column'})};
   background-image: url(${background});
   background-position: center;
   background-size: 100%;
-  
-  `;
-  const Contact = styled(Section)`
+`;
+
+const Contact = styled(Section)`
   display: ${Flex({fd:'column'})};
   background: linear-gradient(to bottom, ${yellow1} 8%, ${yellow3} 52%, ${orange2} 100%);
   padding: 25px;
