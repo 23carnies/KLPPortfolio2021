@@ -2,7 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 
-import { Flex, yellow, orange, blue, black, grey, pine, teal, mauve, violet, white, label, box_shadow4, btn_active } from './utilities';
+import { Flex, yellow3, black, grey, mauve, violet, white, label, box_shadow4, btn_active } from './utilities';
 
 export default function ContactMe() {
 
@@ -41,7 +41,7 @@ const Form = styled.form`
 const Input = styled.input`
     max-width: 750px;
     width: ${({type}) => (type === 'submit') ? '13%' : '50%'};
-    background: ${({type}) => (type === 'submit') ? `${yellow}` : `${white}`};
+    background: ${({type}) => (type === 'submit') ? `${yellow3}` : `${white}`};
     color: ${({type}) => (type === 'submit' ? `${mauve}` : `${grey}`)};
     font: ${label};
     padding: 1%;
