@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
-import { Flex, yellow1, yellow2, yellow3, orange2, orange1, violet, white, black, text, boldType } from '../components/utilities';
+import { Flex, yellow1, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
 import { FootDiv, LgGithub, LgLinkedIn, LgMail } from '../components/footer';
 
 import Layout from "../components/layout";
@@ -12,37 +12,67 @@ import Bird from '../images/phoenix.svg';
 import Flames from '../images/fire.svg';
 import background from '../images/skillsBackground.svg';
 
-import { Canvas, useLoader } from 'react-three-fiber';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { Canvas, useRender, useThree, extend } from 'react-three-fiber';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { a, useSpring } from 'react-spring/three';
 
-const Box = () => {
+extend({ OrbitControls });
+
+const Sphere = (props) => {
+    // const { size } = useSpring({
+    //   size: isBig ? [1.5,1.5,1.5] : [1,1,1]
+    // })
+    const [isBig, setIsBig] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const ref = useRef();
+
+    useRender(() => {
+      ref.current.rotation.x += 0.01;
+      ref.current.rotation.y += 0.01;
+      ref.current.geometry.center()
+    })
     
-    const color = isHovered ? `${orange1}` : `${yellow3}`;
+    const color = isHovered ? `${red2}` : `${yellow3}`;
     
     return ( 
-        <mesh rotation={[10,10,10]}>
-          <boxBufferGeometry attach="geometry" args={[2,2,2]}/>
-          <meshPhongMaterial 
-            flatShading={true}
-            roughness={1}
-            metalness={0.5}
+        <a.mesh 
+          {...props}
+          ref={ref}
+          // scale={size}
+          onClick={() => setIsBig(!isBig)}
+          onPointerOut={() => setIsHovered(false)}
+          onPointerOver={() => setIsHovered(true)}
+        >
+          <boxBufferGeometry attach="geometry" args={[1,1,1]}/>
+          <meshBasicMaterial 
+            flatShading={false}
+            roughness={0.5}
+            metalness={10}
             shininess={100}
             attach="material"
             color={color}
           />
           console.log('text', )
-        </mesh>
+        </a.mesh>
     );
 }
  
 const Scene = () => {
+    const {
+      camera,
+      gl: {
+        domElement
+      }
+    } = useThree()
+
     return ( 
         <>
             <ambientLight />
-            <pointLight intensity={0.5} position={[0,10,4]} />
-              <Box />
+            <pointLight intensity={0.4} position={[5,10,4]} /> 
+            <spotLight castShadow={true} intensity={0.4} position={[0,10,4]} />           <pointLight intensity={0.3} position={[8,10,4]} />
+            <Sphere rotation={[10,10,0]} position={[0,0,0]}/>
+            <Sphere rotation={[10,20,0]} position={[2,2,0]}/>
+            <orbitControls args={[ camera, domElement ]}/>
             
         </>
      );
