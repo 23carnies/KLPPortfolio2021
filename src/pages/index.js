@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
+import Sphere from '../components/sphere'
 import { Flex, yellow1, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
 import { FootDiv, LgGithub, LgLinkedIn, LgMail } from '../components/footer';
 
@@ -15,46 +16,64 @@ import background from '../images/skillsBackground.svg';
 import { Canvas, useRender, useThree, extend } from 'react-three-fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { a, useSpring } from 'react-spring/three';
+import { FontLoader } from 'three';
+import {Roboto} from '../components/utilities/roboto.json'
+
 
 extend({ OrbitControls });
 
-const Sphere = (props) => {
-    // const { size } = useSpring({
-    //   size: isBig ? [1.5,1.5,1.5] : [1,1,1]
-    // })
-    const [isBig, setIsBig] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
-    const ref = useRef();
+const Text = (props) => {
+  // const loader = new FontLoader();
+  const font = new FontLoader().parse(Roboto);
+  const textOptions = {
+    font,
+    size: 2,
+    height: 1
+  };
 
-    useRender(() => {
-      ref.current.rotation.x += 0.01;
-      ref.current.rotation.y += 0.01;
-      ref.current.geometry.center()
-    })
-    
-    const color = isHovered ? `${red2}` : `${yellow3}`;
-    
-    return ( 
-        <a.mesh 
-          {...props}
-          ref={ref}
-          // scale={size}
-          onClick={() => setIsBig(!isBig)}
-          onPointerOut={() => setIsHovered(false)}
-          onPointerOver={() => setIsHovered(true)}
-        >
-          <boxBufferGeometry attach="geometry" args={[1,1,1]}/>
-          <meshBasicMaterial 
-            flatShading={false}
-            roughness={0.5}
-            metalness={10}
-            shininess={100}
-            attach="material"
-            color={color}
-          />
-          console.log('text', )
-        </a.mesh>
-    );
+  return (
+    <mesh castShadow={true}>
+      <textGeometry attach='geometry' args={['PROJECTS', textOptions]} />
+      <meshStandardMaterial attach='material' />
+    </mesh>
+  )
+}
+
+// function Plane() {
+//   return (
+//     <mesh 
+//       receiveShadow={true}
+//       rotation={[-Math.PI / 2, 0,0]} 
+//       position={[0,-5,0]}>
+//       <planeBufferGeometry attach="geometry" args={[10,10]}/>
+//       <meshStandardMaterial attach="material" color="#6e6e6e" />
+//     </mesh>
+//   )
+// }
+
+const Zoom = () => {
+  const { gl, camera } = useThree();
+  useSpring({
+    from: {
+      z: 30,
+    },
+    x: 1,
+    y: 0,
+    z: 3.4,
+    onFrame: ({x,y,z}) => {
+      camera.position.x = x;
+      camera.position.y = y;
+      camera.position.z = z;
+    },
+  });
+  return (
+    <orbitControls 
+      enableZoom={true}
+      enablePan={false}
+      target={[0,0,0]}
+      args={[camera,gl.domElement]}
+    />
+  )
 }
  
 const Scene = () => {
@@ -67,13 +86,27 @@ const Scene = () => {
 
     return ( 
         <>
-            <ambientLight />
-            <pointLight intensity={0.4} position={[5,10,4]} /> 
-            <spotLight castShadow={true} intensity={0.4} position={[0,10,4]} />           <pointLight intensity={0.3} position={[8,10,4]} />
+            <ambientLight intensity={0.8} />
+            <pointLight intensity={0.7} position={[-10,0,-20]} /> 
+            <pointLight intensity={1.3} position={[0,-10,0]} />
+            <directionalLight 
+              castShadow={true}
+              position={[0,10,0]} 
+              intensity={1.5} 
+              shadow-mapSize-shadowMapWidth={1024} 
+              shadow-camera-far={50}  
+              shadow-camera-left={-10}
+              shadow-camera-right={10}
+              shadow-camera-top={10}
+              shadow-camera-bottom={-10}
+            />
+            {/* <spotLight castShadow={true} intensity={0.4} position={[0,10,4]} />  */}
+            {/* <Text /> */}
             <Sphere rotation={[10,10,0]} position={[0,0,0]}/>
-            <Sphere rotation={[10,20,0]} position={[2,2,0]}/>
-            <orbitControls args={[ camera, domElement ]}/>
-            
+            <Sphere rotation={[10,20,0]} position={[3,2,0]}/>
+            {/* <Plane /> */}
+            {/* <orbitControls args={[ camera, domElement ]}/> */}
+            <Zoom/>
         </>
      );
 }
@@ -100,9 +133,13 @@ const IndexPage = () => (
       {/* Projects Section */}
       <Projects>
         <Link to="/projects">
-          <h3>Stuff I've Built</h3>
+          <h3>I built this...</h3>
+          <p>Check out projects I'm proud of here.</p>
         </Link>
-        <Canvas style={{width: '90%'}}>
+        <Canvas 
+          style={{width: '90%'}}
+          // camera={{ position: [-5,2,10], fov: 60 }}
+          >
           <Scene style={{width:'100%'}}/>
         </Canvas>
         </Projects>
