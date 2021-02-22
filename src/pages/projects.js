@@ -4,7 +4,7 @@ import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';
-import { Flex, mauve, orange3, title } from '../components/utilities';
+import { Flex, mauve, title, black } from '../components/utilities';
 
 class Projects extends Component {
     state = { 
@@ -81,7 +81,7 @@ export default Projects;
 
 const ProjectBack = styled.article`
     ${Flex({fd:'column'})}
-    background: ${orange3};
+    background: ${black};
     padding: 0 0 8%;
 `;
 
