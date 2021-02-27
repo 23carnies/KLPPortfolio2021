@@ -10,11 +10,20 @@ class Projects extends Component {
     state = { 
         projects: [
             {
+                title: 't.ux',
+                description: 't.ux is the original, seminal product from theCOOP. I spearheaded the front end design implementation working closely with the design team to create pixel-perfect creations of their wireframes. I constructed a styled component library for the project and am in the process of implementing WAI-ARIA accessibility standards.',
+                image: 'https://tux-staging.herokuapp.com/images/vertical-logo.svg',
+                openLink: 'https://tux-staging.herokuapp.com/',
+                gitLink: 'https://github.com/23carnies/tux',
+                alt: 'Logo for project pronounced Tux'
+            },
+            {
                 title: 'Despejado',
                 description: 'A bilingual weather app built in React, utilizing two APIs and designed in Sass. A passion project built in December 2020.',
                 image: 'https://i.imgur.com/G8S7QY5.jpg',
                 openLink: 'http://despejado.surge.sh/',
                 gitLink: 'https://github.com/23carnies/despejado',
+                alt: 'Screenshot of Despejado app'
             },
             {
                 title: 'Meet Your Maker',
@@ -22,13 +31,15 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/t7IPbkV.png',
                 openLink: 'https://meetyourmaker925.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/MeetYourMakerCoupled',
+                alt: 'Logo for Meet Your Maker'
             },
             {
                 title: 'This Portfolio',
-                description: 'This portfolio ...',
+                description: 'This portfolio is built in Gatsby and utilizes React Spring for animations and React Three Fiber for 3d content. Designed by myself using Styled Components.',
                 image: 'https://i.imgur.com/Jy3m7Ke.jpg',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/portfolio2021',
+                alt: 'Cartoon drawing of Karen'
             },
             {
                 title: 'bilingüe',
@@ -36,20 +47,23 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/TKIM2hY.png',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/bilingue',
+                alt: 'Logo for bilingüe app'
             },
-            {
-                title: 'Psychedelic Roulette',
-                description: 'A vibrant, digital update to the centuries old table game. Built using HTML, pure CSS, and vanilla Javascript. built as a unit project at General Assembly.',
-                image: 'https://i.imgur.com/cWprKHg.png',
-                openLink: 'http://psychedelic-roulette.surge.sh/',
-                gitLink: 'https://github.com/23carnies/psychedelicRoulette',
-            },
+            // {
+            //     title: 'Psychedelic Roulette',
+            //     description: 'A vibrant, digital update to the centuries old table game. Built using HTML, pure CSS, and vanilla Javascript. built as a unit project at General Assembly.',
+            //     image: 'https://i.imgur.com/cWprKHg.png',
+            //     openLink: 'http://psychedelic-roulette.surge.sh/',
+            //     gitLink: 'https://github.com/23carnies/psychedelicRoulette',
+            //     alt: 'Wheel from roulette app'
+            // },
             {
                 title: 'wodWizard',
                 description: 'A full CRUD Express, MongoDB, and Node.js app for daily workouts utilizing Bootstrap for styling and quotes from the Forismatic API. Built as a unit project at General Assembly.',
                 image: 'https://i.imgur.com/e7HxXxR.png',
                 openLink: 'https://wodwizard.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/wodWizard',
+                alt: 'Screenshot of wodWizard app'
             },
         ]
      }
@@ -68,6 +82,7 @@ class Projects extends Component {
                             image={project.image}
                             openLink={project.openLink}
                             gitLink={project.gitLink}
+                            alt={project.alt}
                         />
                     )}
                     </CardGroup>
