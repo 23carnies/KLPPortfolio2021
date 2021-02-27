@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, box_shadow2, white } from '../components/utilities';
+import { Flex, box_shadow2, white, black } from '../components/utilities';
 import { FiGithub } from '@react-icons/all-files/fi/FiGithub'
 import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin'
 import { FaRegFilePdf } from '@react-icons/all-files/fa/FaRegFilePdf'
@@ -12,9 +12,9 @@ export const LgGithub = () => {
     <IconContext.Provider
       value={{ size: '55px', color: `${white}` }}
     >
-      <FootDiv bkColor="git">
+      <IconCircle bkColor="git">
         <FiGithub />
-      </FootDiv>
+      </IconCircle>
     </IconContext.Provider>
    );
 }
@@ -24,9 +24,9 @@ export const LgLinkedIn = () => {
     <IconContext.Provider
       value={{ size: '55px', color: `${white}` }}
     >
-      <FootDiv bkColor="link">
+      <IconCircle bkColor="link">
         <AiOutlineLinkedin />
-      </FootDiv>
+      </IconCircle>
     </IconContext.Provider>
    );
 }
@@ -37,9 +37,9 @@ export const LgPDF = () => {
       value={{ color: `${white}`, size: '55px' }}
       
     >
-      <FootDiv>
+      <IconCircle>
         <FaRegFilePdf />
-      </FootDiv>
+      </IconCircle>
     </IconContext.Provider>
    );
 }
@@ -49,9 +49,9 @@ export const LgMail = () => {
     <IconContext.Provider 
       value={{ size: '55px', color: `${white}` }}
     >
-      <FootDiv>
+      <IconCircle>
         <BiMailSend />
-      </FootDiv>
+      </IconCircle>
     </IconContext.Provider>
   )
 }
@@ -60,9 +60,12 @@ export const LgMail = () => {
 const Footer = () => {
     return ( 
         <Foot>
-          <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
-          <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
-          <a rel="noreferrer" target="_blank" href="http://karenlobinperkincom/karenlobinperkinpdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
+          <FootDiv>
+            <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
+            <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
+            <a rel="noreferrer" target="_blank" href="http://karenlobinperkincom/karenlobinperkinpdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
+
+          </FootDiv>
           <FootP>
             © {new Date().getFullYear()} Karen Lobin Perkins
             {/* , Built with {` `} */}
@@ -74,24 +77,29 @@ const Footer = () => {
 export default Footer;
 
 const Foot = styled.footer`
-    background: #000;
-    ${Flex};
-    max-height: 150px;
+    background: ${black};
+    ${Flex({ai:'center'})};
+    max-height: 115px;
 `;
 
-export const FootDiv = styled.div`
+const FootDiv = styled.div`
+  margin-top: 10px; 
+  ${Flex({jc:'center'})};
+`;
+
+export const IconCircle = styled.div`
     background: ${({bkColor}) => ((bkColor === 'git') ? '#6e5494' : (bkColor === 'link') ? '#0072b1' : '#ed2224')};
     border-radius: 50%;
     box-shadow: ${box_shadow2};
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     ${Flex};
     margin: 30px;
     border: 1px solid white;
     `;
 
 const FootP = styled.p`
-    color: #fff;
-    margin: 100px 30px 0 auto;
+    color: ${white};
+    margin: 50px 30px 0 auto;
     /* padding-top: 70%; */
 `;
