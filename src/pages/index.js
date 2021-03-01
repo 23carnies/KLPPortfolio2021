@@ -5,7 +5,7 @@ import NamePlate from '../components/nameplate';
 import SmallCard from '../components/smProjectCard';
 // import SmallCard from '../components/projectCard';
 import { Flex, yellow1, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
-import { FootDiv, LgGithub, LgLinkedIn, LgMail } from '../components/footer';
+import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
