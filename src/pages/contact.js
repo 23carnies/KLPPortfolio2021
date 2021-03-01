@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import ContactMe from '../components/emailjs';
-import { Flex, title, yellow3, orange3 } from '../components/utilities';
+import { Flex, title, yellow3, below } from '../components/utilities';
 
 
 const Contact = () => {
@@ -22,15 +22,20 @@ export default Contact;
 
 const Box = styled.div`
     ${Flex({fd:'column'})};
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
 
 `;
 
-const Headline = styled.h4`
+const Headline = styled.h3`
     text-align: center;
-    font: ${title};
+    font-family: ${title};
     color: ${yellow3};
-    border-bottom: 5px dotted ${yellow3};
-    margin: 0;
+    margin: 1.5% 1% 1%;
+    ${below.large`
+        font-size: 2.4rem;
+    `}
+    ${below.medium`
+        font-size: 2rem;
+    `}
 `;

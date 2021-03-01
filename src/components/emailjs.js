@@ -2,7 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 
-import { Flex, yellow3, black, grey, mauve, violet, white, label, box_shadow4, btn_active, below } from './utilities';
+import { Flex, yellow3, black, grey, mauve, smLabel, white, label, box_shadow4, btn_active, below } from './utilities';
 
 export default function ContactMe() {
 
@@ -35,6 +35,7 @@ const Form = styled.form`
     ${Flex({fd:'column'})};
     padding: 15px;
     width: 100%;
+    
 
 `;
 
@@ -49,16 +50,28 @@ const Input = styled.input`
     border-radius: ${({type}) => (type === 'submit' ? '12px' : '5px')};
     box-shadow: ${({type}) => (type === 'submit' ? `${box_shadow4}` : 'none')};
     ${below.xLarge`
+      max-width: 650px;
+    `}
+    ${below.large`
       max-width: 500px;
     `}
-
+    ${below.medium`
+      font: ${smLabel};
+      padding: 0.8%;
+      width: ${({type}) => (type === 'submit') ? '23%' : '90%'};
+    `}
     :hover {
         box-shadow: ${({type}) => (type === 'submit' ? `${btn_active}` : 'none')};
 
     }
+
+    
 `;
 
 const Label = styled.label`
     color: ${white};
     font: ${label};
+    ${below.medium`
+      font: ${smLabel};
+    `}
 `;
