@@ -11,7 +11,7 @@ const About = () => {
             <AboutBack>
             <Headline>Hi! I'm Karen</Headline>
             <Box>
-                <Img src="https://i.imgur.com/XxhHjhz.jpg" alt="Karen "/>
+                <Img src="https://i.imgur.com/XxhHjhz.jpg" alt="Karen at the Tower of Pisa"/>
                 <div style={{minWidth: '50%'}}>
                 <AboutText>From my earliest memories, I’ve always loved to learn. I taught myself to play guitar and built a car from scratch with my father as a teenager. I enjoy DIYing and cooking, both allowing my creative side to flourish. I’ve studied multiple languages and I picked up HTML and CSS in college. For years I built sites for family and friends until deciding to pivot my career to software development. </AboutText>
                 <AboutText>A recent graduate of the Software Engineering Immersive at General Assembly, I am experienced in modern web design. Skilled in pure CSS and several frameworks, I build alluring sites and apps with great functionality.</AboutText>
@@ -33,20 +33,26 @@ const AboutBack = styled.div`
     margin: 0 auto;
     ${Flex({fd:'column'})};
     ${below.xLarge`
-        max-width: 1000px;
+        max-width: 1280px;
     `}
 `;
 
 const Box = styled.div`
     ${Flex({ai:'flex-start'})}
+    width: 100%;
 `;
 
-const Headline = styled.h4`
-    margin: 0;
+const Headline = styled.h3`
     text-align: center;
-    font: ${title};
+    font-family: ${title};
     color: ${yellow3};
-    border-bottom: 5px dotted ${yellow3};
+    margin: 1.5% 1% 1%;
+    ${below.large`
+        font-size: 2.4rem;
+    `}
+    ${below.medium`
+        font-size: 2rem;
+    `}
 `;
 
 const Img = styled.img`

@@ -4,7 +4,7 @@ import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';
-import { Flex, mauve, title, below } from '../components/utilities';
+import { Flex, yellow3, title, below } from '../components/utilities';
 
 class Projects extends Component {
     state = { 
@@ -91,11 +91,17 @@ const ProjectBack = styled.article`
     padding: 0 0 8%;
 `;
 
-const Headline = styled.h4`
-    font: ${title};
-    color: ${mauve};
-    border-bottom: 5px dotted ${mauve};
-    margin: 0;
+const Headline = styled.h3`
+    text-align: center;
+    font-family: ${title};
+    color: ${yellow3};
+    margin: 1.5% 1% 1%;
+    ${below.large`
+        font-size: 2.4rem;
+    `}
+    ${below.medium`
+        font-size: 2rem;
+    `}
 `;
 
 const CardGroup = styled.section`
@@ -103,6 +109,6 @@ const CardGroup = styled.section`
     max-width: 1400px;
     height: 100vh;
     ${below.xLarge`
-        max-width: 1000px;
+        max-width: 1280px;
     `}
 `;
