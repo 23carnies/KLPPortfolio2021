@@ -33,7 +33,7 @@ const Nav = styled.nav`
     height: 80px;
 
     ${below.xLarge`
-      max-width: 1000px;
+      max-width: 1280px;
     `}
 `;
 

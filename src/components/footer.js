@@ -28,19 +28,28 @@ const Foot = styled.footer`
     background: ${black};
     ${Flex({ai:'center'})};
     max-height: 115px;
+    ${below.small`
+      ${Flex({fd:'column'})};
+      max-height: 150px;
+    `}
 `;
 
 const FootDiv = styled.div`
   margin-top: 10px; 
   ${Flex({jc:'center'})};
+  ${below.small`
+    margin: 0;
+  `}
 `;
-
-
 
 const FootP = styled.p`
     color: ${white};
     margin: 50px 30px 0 auto;
     ${below.medium`
       font-size: .7rem;
+    `}
+    ${below.small`
+      margin: -25px 0 0;
+      padding-bottom: 10px;
     `}
 `;
