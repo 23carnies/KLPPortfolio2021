@@ -4,7 +4,7 @@ import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';
-import { Flex, mauve, title, black } from '../components/utilities';
+import { Flex, mauve, title, below } from '../components/utilities';
 
 class Projects extends Component {
     state = { 
@@ -102,4 +102,7 @@ const CardGroup = styled.section`
     ${Flex({fw:'wrap'})};
     max-width: 1400px;
     height: 100vh;
+    ${below.xLarge`
+        max-width: 1000px;
+    `}
 `;

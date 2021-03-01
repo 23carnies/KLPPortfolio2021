@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import { Flex, navItem } from './utilities';
+import { Flex, navItem, below } from './utilities';
 import kpLogo from '../images/logo.svg'
 
 
@@ -31,6 +31,10 @@ const Nav = styled.nav`
     padding: 10px 0 0;
     margin: 0 auto;
     height: 80px;
+
+    ${below.xLarge`
+      max-width: 1000px;
+    `}
 `;
 
 const Logo = styled.img`
