@@ -30,7 +30,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-// const Layout = styled.article`
-//     margin: 0 auto;
-// `;
