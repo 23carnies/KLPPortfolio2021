@@ -26,7 +26,7 @@ const IndexPage = () => (
           <h4>Find out more<br/> about me here</h4>
         </Link>
           <Phoenix src={Bird} alt="phoenix"/>
-          <Quote>"Our greatest glory is not in never failing, but in rising every time we fall." <br/><i>--Confucious</i></Quote>
+          <Text>"Our greatest glory is not in never failing, but in rising every time we fall." <br/><i>--Confucious</i></Text>
       </About>
           <Fire src={Flames} alt="flames"/>
 
@@ -36,7 +36,7 @@ const IndexPage = () => (
           <h3>I built this...</h3>
         </Link>
           {/* <SmallCard /> */}
-          <Quote>Check out more projects here.</Quote>
+          <Text>Check out more projects here.</Text>
 
         </Projects>
 
@@ -51,7 +51,7 @@ const IndexPage = () => (
         <Link to="/contact">
           <h4>Email me here.</h4>
         </Link>
-          <Quote>I am looking for a Front End Engineering role at a team-focused company.</Quote>
+          <Text>I am looking for a Front End Engineering role at a team-focused company.</Text>
       </Contact>
 
     </Main>
@@ -71,18 +71,13 @@ const Section = styled.section`
 `;
 
 const About = styled(Section)`
-  /* ${Flex({fd:'column',ai:'space-around',jc:'center'})}; */
   display: grid;
   grid-template-rows: repeat(3,1fr);
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   
-  `;
+`;
 
-const AboutText = styled(Link)`
-  font: ${text};
-  grid-row: 1/span 1;
-  padding: 0 10px;
-  `;
+
 
 const Phoenix = styled.img`
   width: 280px;
@@ -92,7 +87,7 @@ const Phoenix = styled.img`
   margin: 0 auto;
 `;
 
-const Quote = styled.p`
+const Text = styled.p`
   color: ${black};
   text-align: center;
   padding: 0 20px;
@@ -105,7 +100,6 @@ const Fire = styled.img`
   width: 100%;
   margin: 0 auto;
   margin-bottom: 3.6%;
-  /* grid-row: 3/span 3; */
   position: absolute;
   left: 4px;
   bottom: 62px;
@@ -117,15 +111,10 @@ const Projects = styled(Section)`
   background: linear-gradient(to bottom, ${yellow1} 8%, ${yellow3} 52%, ${orange2} 100%);
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   position: relative;
-  /* background-image: url(${background});
-  background-position: center;
-  background-size: 100%; */
 `;
 
 const Contact = styled(Section)`
   display: ${Flex({fd:'column'})};
-
-  /* background: linear-gradient(to bottom, ${yellow1} 8%, ${yellow3} 52%, ${orange2} 100%); */
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   padding: 25px;
 `;

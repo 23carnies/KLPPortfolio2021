@@ -24,7 +24,7 @@ const Box = styled.div`
     ${Flex({fd:'column'})};
     width: 100%;
     text-align: center;
-    /* background: ${orange3}; */
+
 `;
 
 const Headline = styled.h4`

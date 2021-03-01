@@ -33,8 +33,7 @@ const AboutBack = styled.div`
     max-width: 1440px;
     margin: 0 auto;
     ${Flex({fd:'column'})};
-    /* background: ${orange1}; */
-    /* background: ${orange3}; */
+
 `;
 
 const Box = styled.div`
@@ -53,7 +52,7 @@ const Img = styled.img`
     margin: 40px 20px;
     width: 30%;
     border-radius: 12px;
-    /* max-width: 45%; */
+
 `;
 
 const AboutText = styled.p`

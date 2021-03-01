@@ -49,14 +49,6 @@ class Projects extends Component {
                 gitLink: 'https://github.com/23carnies/bilingue',
                 alt: 'Logo for bilingüe app'
             },
-            // {
-            //     title: 'Psychedelic Roulette',
-            //     description: 'A vibrant, digital update to the centuries old table game. Built using HTML, pure CSS, and vanilla Javascript. built as a unit project at General Assembly.',
-            //     image: 'https://i.imgur.com/cWprKHg.png',
-            //     openLink: 'http://psychedelic-roulette.surge.sh/',
-            //     gitLink: 'https://github.com/23carnies/psychedelicRoulette',
-            //     alt: 'Wheel from roulette app'
-            // },
             {
                 title: 'wodWizard',
                 description: 'A full CRUD Express, MongoDB, and Node.js app for daily workouts utilizing Bootstrap for styling and quotes from the Forismatic API. Built as a unit project at General Assembly.',
@@ -96,7 +88,6 @@ export default Projects;
 
 const ProjectBack = styled.article`
     ${Flex({fd:'column'})}
-    /* background: ${black}; */
     padding: 0 0 8%;
 `;
 
