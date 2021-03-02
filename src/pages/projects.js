@@ -12,7 +12,7 @@ class Projects extends Component {
             {
                 title: 't.ux',
                 description: 't.ux is the original, seminal product from theCOOP. I spearheaded the front end design implementation working closely with the design team to create pixel-perfect creations of their wireframes. I constructed a styled component library for the project and am in the process of implementing WAI-ARIA accessibility standards.',
-                image: 'https://tux-staging.herokuapp.com/images/vertical-logo.svg',
+                image: 'https://i.imgur.com/P0dkuGz.png',
                 openLink: 'https://tux-staging.herokuapp.com/login',
                 gitLink: 'https://github.com/23carnies/tux',
                 alt: 'Logo for project pronounced Tux'
