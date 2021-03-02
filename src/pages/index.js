@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
 import SmallCard from '../components/smProjectCard';
@@ -35,8 +35,13 @@ const IndexPage = () => (
         <Link to="/projects">
           <h3>I built this...</h3>
         </Link>
+        <Tux>
+          <TuxImg src="https://i.imgur.com/P0dkuGz.png"/>
+          <Text>t.ux is the original product from theCOOP. I spearheaded the front end design implementation constructing a styled component library for the project and am in the process of implementing WAI-ARIA accessibility standards.</Text>
+          <Link to="https://github.com/23carnies/tux"><Text github>t.ux Github repo</Text></Link>
+        </Tux>
           {/* <SmallCard /> */}
-          <Text>Check out more projects here.</Text>
+          <Text projects>Check out more projects here.</Text>
 
         </Projects>
 
@@ -91,9 +96,19 @@ const Text = styled.p`
   color: ${black};
   text-align: center;
   padding: 0 20px;
+  margin: 0;
   font: ${boldType};
   z-index: 15;
   grid-row: 3/span 1;
+
+  ${props => props.github && css`
+    text-decoration: underline;
+    margin-top: 5px;
+  `}
+  ${props => props.projects && css`
+    text-decoration: underline;
+    margin-top: 6%;
+  `}
 `;
 
 const Fire = styled.img`
@@ -101,17 +116,35 @@ const Fire = styled.img`
   margin: 0 auto;
   margin-bottom: 3.6%;
   position: absolute;
-  left: 4px;
-  bottom: 62px;
+  left: 0;
+  bottom: 0%;
   z-index: 1;
 `;
 
 const Projects = styled(Section)`
-  ${Flex({fd:'column'})};
-  background: linear-gradient(to bottom, ${yellow1} 8%, ${yellow3} 52%, ${orange2} 100%);
+  ${Flex({fd:'column',jc:'flex-start'})};
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   position: relative;
+  `;
+
+const Tux = styled.div`
+  width: 75%;
+  border: 1px solid ${yellow3};
+  height: 50%;
+  /* background: transparent; */
+  background-color: rgba(255,255,255,.25);
+  border-radius: 15px;
+  z-index: 15;
 `;
+
+const TuxImg = styled.img`
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+  /* z-index: 15; */
+`;
+
+
 
 const Contact = styled(Section)`
   display: ${Flex({fd:'column'})};
