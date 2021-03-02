@@ -65,6 +65,7 @@ class Projects extends Component {
                 <Header />
                 <ProjectBack>
                     <Headline>My work</Headline>
+                    <SubLine>Click card for more info</SubLine>
                     <CardGroup>
                     {this.state.projects.map((project, idx) =>
                         <ProjectCard 
@@ -102,6 +103,13 @@ const Headline = styled.h3`
     ${below.medium`
         font-size: 2rem;
     `}
+`;
+
+const SubLine = styled.p`
+    margin: 0;
+    color: ${yellow3};
+    font-family: ${title};
+    
 `;
 
 const CardGroup = styled.section`
