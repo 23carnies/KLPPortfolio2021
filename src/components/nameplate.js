@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, nameplate, white, yellow2, yellow1, red2, navItem  } from '../components/utilities';
+import { Flex, nameplate, white, yellow2, yellow1, red2, navItem, below  } from '../components/utilities';
 // import { Link } from "gatsby"
 import kpLogo from '../images/logo.svg'
 
@@ -8,13 +8,15 @@ const Nameplate = () => {
     
     return ( 
         <Header>
-            <Logo src={kpLogo} alt="KP Phoenix Logo"/>
-            <Effect>
-                <Name>Karen Lobin Perkins</Name>
-                <GradientName></GradientName>
-                <DodgeName></DodgeName>
+            <Container>
+                <Effect>
+                <Logo src={kpLogo} alt="KP Phoenix Logo"/>
+                    <Name>Karen Lobin Perkins</Name>
+                    <GradientName></GradientName>
+                    <DodgeName></DodgeName>
                 </Effect>
-               <Title>Front End Engineer</Title>
+                <Title>Front End Engineer</Title>
+            </Container>
         </Header>
      );
 }
@@ -25,30 +27,73 @@ const Header = styled.header`
     width: 100vw;
     ${Flex};
     background: #000;
+    /* ${below.large`
+        ${Flex({fd:'column'})};
+    `} */
+`;
+const Container = styled.div`
+    max-width: 1440px;
+    ${below.xLarge`
+        max-width: 1280px;
+    `};
+    ${below.large`
+        max-width: 1024px;
+    `};
+    ${below.medium`
+        max-width: 768px;
+    `};
+    ${below.small`
+        max-width: 90%;
+    `};
 `;
 
 const Logo = styled.img`
     border-radius: 50%;
     width: 120px;
     margin-right: 15px;
+    position:absolute;
+    left: 0;
 `;
 
 const Effect = styled.div`
+    ${Flex({fd:'column',})};
     background: #000;
-    overflow: hidden;
     height: 120px;
     width: 58vw;
     padding: 30px 0;
+    overflow: hidden;
+    
+    filter: brightness(200%);
 
-    filter: brightness(200%)
+    ${below.large`
+        width: 65vw;
+    `};
 `;
 
 const Name = styled.h1`
+    z-index:1;
     font: ${nameplate};
-    width: 100vw;
+    /* width: 100vw; */
     color: ${white};
     text-transform: uppercase;
     position: absolute;
+    left: 15%;
+    top: 13%;
+    ${below.xXLarge`
+        font-size: 3.3rem;
+        top: 23%;
+        `}
+    ${below.xLarge`
+        font-size: 3.1rem;
+        top: 23%;
+    `}
+    ${below.large`
+        font-size: 2.2rem;
+        margin-left: 25px;
+    `}
+    ${below.medium`
+        font-size: 2rem;
+    `}
 
     /* left: 20%; */
 
@@ -62,7 +107,7 @@ const Name = styled.h1`
 
 const Title = styled.h2`
     font: ${navItem};
-    margin-left: 30px;
+    margin: -10px auto 10px;
     color: ${yellow1};
 `;
 
@@ -73,6 +118,7 @@ const GradientName = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     mix-blend-mode: multiply;
 `;
@@ -84,6 +130,7 @@ const DodgeName = styled.div`
     left: -100%;
     right: 0;
     bottom: 0;
+    z-index: 2;
 
     mix-blend-mode: color-dodge;
     animation: dodge-area 14s linear infinite;
