@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const size = {
-    xXLarge: 1920,
+    xXLarge: 1600,
     xLarge: 1440,
     large: 1280,
     medium: 1024,
