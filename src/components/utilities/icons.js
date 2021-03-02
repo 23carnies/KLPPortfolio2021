@@ -80,4 +80,8 @@ export const IconCircle = styled.div`
         width: 60px;
         height: 60px;
     `}
+    ${below.small`
+        width: 80px;
+        height: 80px;
+    `}
 `;

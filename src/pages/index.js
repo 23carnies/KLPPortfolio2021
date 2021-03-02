@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
 import SmallCard from '../components/smProjectCard';
 // import SmallCard from '../components/projectCard';
-import { Flex, yellow1, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
+import { Flex, below, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
 import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
 import Layout from "../components/layout";
@@ -56,7 +56,7 @@ const IndexPage = () => (
         <Link to="/contact">
           <h4>Email me here.</h4>
         </Link>
-          <Text>I am looking for a Front End Engineering role at a team-focused company.</Text>
+          <Text>I am looking for a Front End Engineering<br/> role at a team-focused company.</Text>
       </Contact>
 
     </Main>
@@ -65,14 +65,20 @@ const IndexPage = () => (
 
 export default IndexPage;
 
-const Main = styled.article`
+const Main = styled.section`
   ${Flex};
+  ${below.medium`
+    ${Flex({fd:'column'})}
+  `}
 `;
 
 const Section = styled.section`
   height: 75vh;
   width: 33.33vw;
   ${Flex};
+  ${below.medium`
+    width: 100vw;
+  `}
 `;
 
 const About = styled(Section)`
@@ -81,8 +87,6 @@ const About = styled(Section)`
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   
 `;
-
-
 
 const Phoenix = styled.img`
   width: 280px;
@@ -119,12 +123,27 @@ const Fire = styled.img`
   left: 0;
   bottom: 0%;
   z-index: 1;
+  ${below.xXLarge`
+    bottom: 2.7%;
+  `}
+  ${below.xLarge`
+    bottom: 3.2%;
+  `}
+  ${below.large`
+    bottom: 3.7%;
+  `}
+  ${below.medium`
+    bottom: 4.6%;
+  `}
 `;
 
 const Projects = styled(Section)`
   ${Flex({fd:'column',jc:'flex-start'})};
   background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   position: relative;
+  ${below.small`
+    ${Flex({fd:'column',jc:'center'})};
+  `}
   `;
 
 const Tux = styled.div`
@@ -135,6 +154,11 @@ const Tux = styled.div`
   background-color: rgba(255,255,255,.25);
   border-radius: 15px;
   z-index: 15;
+  ${below.small`
+    width: 95%;
+    height: 60%;
+    padding: 2%;
+  `}
 `;
 
 const TuxImg = styled.img`
