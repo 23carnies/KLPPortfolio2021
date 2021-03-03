@@ -1,10 +1,8 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import NamePlate from '../components/nameplate';
-import SmallCard from '../components/smProjectCard';
-// import SmallCard from '../components/projectCard';
-import { Flex, below, yellow2, yellow3, orange1, orange2, orange3, red1, red2, red3, violet, white, black, text, boldType } from '../components/utilities';
+import { Flex, below, yellow3, violet, black, boldType } from '../components/utilities';
 import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
 import Layout from "../components/layout";
@@ -12,7 +10,6 @@ import SEO from "../components/seo";
 
 import Bird from '../images/phoenix.svg';
 import Flames from '../images/fire.svg';
-import background from '../images/skillsBackground.svg';
 
 const IndexPage = () => (
   <Layout>
