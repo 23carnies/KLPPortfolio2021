@@ -85,3 +85,50 @@ main {
   height: calc(100% - 215px);
   /* height: 100vh; */
 }
+
+
+/* @supports (-webkit-appearance:none) {
+  .effect, 
+  .gradientName, 
+  .dodgeName {
+      display: none;
+  }
+
+} */
+
+/* .name {
+    font: 4rem 'Warnes', display;
+    z-index: 1;
+    color: #ffffd9;
+    text-transform: uppercase;
+    position: absolute;
+    left: 15%;
+    top: 13%;
+}
+
+
+@media only screen and (max-width:1600px) {
+    .name {
+        font-size: 3.3rem;
+        top: 23%;
+    }
+}
+@media only screen and (max-width:1440px) {
+    .name {
+        font-size: 3.1rem;
+        top: 23%;
+    }
+}
+@media only screen and (max-width:1280px) {
+    .name {
+        font-size: 2.2rem;
+        margin-left: 25px;
+    }
+}
+@media only screen and (max-width:1024px) {
+    .name {
+        font-size: 2rem;
+    }
+}
+
+ */

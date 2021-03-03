@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import { Flex, nameplate, white, yellow2, yellow1, red2, navItem, below  } from '../components/utilities';
 // import { Link } from "gatsby"
 import kpLogo from '../images/logo.svg'
+import styles from './nameplate.css';
 
 const Nameplate = () => {
     
     return ( 
         <Header>
             <Container>
-                <Effect>
+                <Effect className="effect">
                 <Logo src={kpLogo} alt="KP Phoenix Logo"/>
-                    <Name>Karen Lobin Perkins</Name>
-                    <GradientName></GradientName>
-                    <DodgeName></DodgeName>
+                    <Name className="name">Karen Lobin Perkins</Name>
+                    <GradientName className="gradientName"></GradientName>
+                    <DodgeName className="dodgeName"></DodgeName>
                 </Effect>
                 <Title>Front End Engineer</Title>
             </Container>

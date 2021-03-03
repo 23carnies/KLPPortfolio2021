@@ -8,7 +8,7 @@ const About = () => {
 
     return ( 
         <Layout>
-            <Header />
+            {/* <Header /> */}
             <AboutBack>
             <Headline>Hi! I'm Karen</Headline>
             <Box>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import NamePlate from '../components/nameplate';
+// import NamePlate from '../components/nameplate';
 import { Flex, below, yellow3, violet, black, boldType } from '../components/utilities';
 import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
@@ -14,7 +14,7 @@ import Flames from '../images/fire.svg';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <NamePlate />
+    {/* <NamePlate /> */}
     <Main>
       
       {/* About Me Section */}

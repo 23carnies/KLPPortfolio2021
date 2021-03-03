@@ -62,7 +62,7 @@ class Projects extends Component {
     render() { 
         return ( 
             <Layout>
-                <Header />
+                {/* <Header /> */}
                 <ProjectBack>
                     <Headline>My work</Headline>
                     <SubLine>Click card for more info</SubLine>

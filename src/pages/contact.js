@@ -9,7 +9,7 @@ import { Flex, title, yellow3, below } from '../components/utilities';
 const Contact = () => {
     return ( 
         <Layout>
-            <Header />
+            {/* <Header /> */}
             <Box>
                 <Headline>Let's work together!</Headline>
                 <ContactMe />
