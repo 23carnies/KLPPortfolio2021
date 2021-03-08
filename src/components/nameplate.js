@@ -3,18 +3,17 @@ import styled from 'styled-components';
 import { Flex, nameplate, white, yellow2, yellow1, red2, navItem, below  } from '../components/utilities';
 // import { Link } from "gatsby"
 import kpLogo from '../images/logo.svg'
-import styles from './nameplate.css';
 
 const Nameplate = () => {
     
     return ( 
         <Header>
             <Container>
-                <Effect className="effect">
+                <Effect>
                 <Logo src={kpLogo} alt="KP Phoenix Logo"/>
-                    <Name className="name">Karen Lobin Perkins</Name>
-                    <GradientName className="gradientName"></GradientName>
-                    <DodgeName className="dodgeName"></DodgeName>
+                    <Name>Karen Lobin Perkins</Name>
+                    <GradientName></GradientName>
+                    <DodgeName></DodgeName>
                 </Effect>
                 <Title>Front End Engineer</Title>
             </Container>
@@ -65,6 +64,7 @@ const Effect = styled.div`
     overflow: hidden;
     
     filter: brightness(200%);
+    -webkit-filter: brightness(200%);
 
     ${below.large`
         width: 65vw;
@@ -101,8 +101,10 @@ const Name = styled.h1`
     &:before {
         content: 'Karen Lobin Perkins';
         mix-blend-mode: difference;
+        -webkit-mix-blend-mode: difference;
         position: absolute;
-        filter: blur(2px)
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
     }
 `;
 
@@ -122,6 +124,7 @@ const GradientName = styled.div`
     z-index: 2;
 
     mix-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
 `;
 
 const DodgeName = styled.div`
@@ -134,11 +137,13 @@ const DodgeName = styled.div`
     z-index: 2;
 
     mix-blend-mode: color-dodge;
+    -webkit-mix-blend-mode: color-dodge;
     animation: dodge-area 14s linear infinite;
 
     @keyframes dodge-area {
         to {
             transform: translate(50%, 50%);
+            -webkit-transform: translate(50%, 50%);
         }
     }
 `;
