@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-// import NamePlate from '../components/nameplate';
-import { Flex, below, yellow3, violet, black, boldType } from '../components/utilities';
+import NamePlate from '../components/nameplate';
+import { Flex, below, yellow3, violet, black, boldType, descript } from '../components/utilities';
 import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
 import Layout from "../components/layout";
@@ -34,7 +34,7 @@ const IndexPage = () => (
         </Link>
         <Tux>
           <TuxImg src="https://i.imgur.com/P0dkuGz.png"/>
-          <Text>t.ux is the original product from theCOOP. I spearheaded the front end design implementation constructing a styled component library for the project and am in the process of implementing WAI-ARIA accessibility standards.</Text>
+          <Text descript>t.ux is the original product from theCOOP. I spearheaded the front end design implementation constructing a styled component library for the project and am in the process of implementing WAI-ARIA accessibility standards.</Text>
           <Link to="https://github.com/23carnies/tux"><Text github>t.ux Github repo</Text></Link>
         </Tux>
           {/* <SmallCard /> */}
@@ -73,9 +73,9 @@ const Section = styled.section`
   height: 75vh;
   width: 33.33vw;
   ${Flex};
-  ${below.medium`
+  ${below.large`
     width: 100vw;
-  `}
+  `};
 `;
 
 const About = styled(Section)`
@@ -110,6 +110,9 @@ const Text = styled.p`
     text-decoration: underline;
     margin-top: 6%;
   `}
+  ${props => props.descript && css`
+    font: ${descript};
+  `}
 `;
 
 const Fire = styled.img`
@@ -130,7 +133,7 @@ const Fire = styled.img`
     bottom: 3.7%;
   `}
   ${below.medium`
-    bottom: 4.6%;
+    bottom: 13.2%;
   `}
 `;
 
@@ -151,11 +154,14 @@ const Tux = styled.div`
   background-color: rgba(255,255,255,.25);
   border-radius: 15px;
   z-index: 15;
+  ${below.large`
+    height: 60%;
+  `};
   ${below.small`
     width: 95%;
     height: 60%;
     padding: 2%;
-  `}
+  `};
 `;
 
 const TuxImg = styled.img`
