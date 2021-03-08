@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react';
 import { Canvas, useRender, useThree, extend } from 'react-three-fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { a, useSpring } from 'react-spring/three';
-import { red2, yellow3, orange1, orange2, violet } from './utilities'
+import { red2, yellow3, orange1, orange2, violet } from '../utilities'
 
 const Sphere = (props) => {
     // const { size } = useSpring({
