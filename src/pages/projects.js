@@ -35,7 +35,7 @@ class Projects extends Component {
             },
             {
                 title: 'This Portfolio',
-                description: 'This portfolio is built in Gatsby and utilizes React Spring for animations and React Three Fiber for 3d content. Designed by myself using Styled Components.',
+                description: 'This portfolio is built in Gatsby and utilizes React Spring for animations. Designed by myself using Styled Components.',
                 image: 'https://i.imgur.com/Jy3m7Ke.jpg',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/portfolio2021',
