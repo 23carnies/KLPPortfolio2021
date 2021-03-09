@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import NamePlate from '../components/nameplate';
 import { Flex, below, yellow3, violet, black, boldType, descript } from '../components/utilities';
 import { LgGithub, LgLinkedIn, LgMail } from '../components/utilities/icons';
 
@@ -12,6 +11,7 @@ import Bird from '../images/phoenix.svg';
 import Flames from '../images/fire.svg';
 
 const IndexPage = () => (
+  
   <Layout>
     <SEO title="Home" />
     {/* <NamePlate /> */}
@@ -23,7 +23,7 @@ const IndexPage = () => (
           <h4>Find out more<br/> about me here</h4>
         </Link>
           <Phoenix src={Bird} alt="phoenix"/>
-          <Text>"Our greatest glory is not in never failing, but in rising every time we fall." <br/><i>--Confucious</i></Text>
+          <Text type="quote">"Our greatest glory is not in never failing, but in rising every time we fall." <br/><i>--Confucious</i></Text>
       </About>
           <Fire src={Flames} alt="flames"/>
 
@@ -99,8 +99,15 @@ const Text = styled.p`
   padding: 0 20px;
   margin: 0;
   font: ${boldType};
-  z-index: 15;
+  z-index: 5;
   grid-row: 3/span 1;
+  background: rgba(255,255,255,.2);
+  border-radius: 8px;
+  padding: 1%;
+  ${below.large`
+    background: ${({ type }) => (type === 'quote' ? 'rgba(255,255,255,.2)' : 'none')};
+    
+  `}
 
   ${props => props.github && css`
     text-decoration: underline;
