@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 
 import { Flex, boxshadow4, black, grey, white, violet, mauve, cardBorder, box_shadow3, boldType } from '../components/utilities';
 
-const ProjectCard = ({ title, description, image, openLink, gitLink, alt }) => {
+const ProjectCard = ({ title, description, image, openLink, gitLink, alt, info }) => {
     const [cardFlip, setCardFlip] = useState(false);
     const { transform, opacity } = useSpring({
         opacity: (cardFlip === false) ? 1 : 0,
@@ -25,6 +25,7 @@ const ProjectCard = ({ title, description, image, openLink, gitLink, alt }) => {
            <animated.div style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
                 <CardBack>
                     <Pgraph>{description}</Pgraph>
+                    <Pgraph>{info}</Pgraph>
                     <div style={{margin: 'auto 15px 35px'}}>
                         <BTN type="open" href={openLink} target="_blank" rel="noreferrer" alt="opens new window to ">Open</BTN>
                         <BTN href={gitLink} target="_blank" rel="noreferrer" alt="opens new window to ">Github</BTN>

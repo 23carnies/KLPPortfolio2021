@@ -15,7 +15,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/P0dkuGz.png',
                 openLink: 'https://tux-staging.herokuapp.com/login',
                 gitLink: 'https://github.com/23carnies/tux',
-                alt: 'Logo for project pronounced Tux'
+                alt: 'Logo for project pronounced Tux',
+                info: ''
             },
             {
                 title: 'Despejado',
@@ -23,7 +24,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/G8S7QY5.jpg',
                 openLink: 'http://despejado.surge.sh/',
                 gitLink: 'https://github.com/23carnies/despejado',
-                alt: 'Screenshot of Despejado app'
+                alt: 'Screenshot of Despejado app',
+                info: ''
             },
             {
                 title: 'Meet Your Maker',
@@ -31,7 +33,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/t7IPbkV.png',
                 openLink: 'https://meetyourmaker925.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/MeetYourMakerCoupled',
-                alt: 'Logo for Meet Your Maker'
+                alt: 'Logo for Meet Your Maker',
+                info: ''
             },
             {
                 title: 'This Portfolio',
@@ -39,7 +42,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/Jy3m7Ke.jpg',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/portfolio2021',
-                alt: 'Cartoon drawing of Karen'
+                alt: 'Cartoon drawing of Karen',
+                info: ''
             },
             {
                 title: 'bilingüe',
@@ -47,7 +51,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/TKIM2hY.png',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/bilingue',
-                alt: 'Logo for bilingüe app'
+                alt: 'Logo for bilingüe app',
+                info: 'Guest user: diana password: 1234aaaa*'
             },
             {
                 title: 'wodWizard',
@@ -55,7 +60,8 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/e7HxXxR.png',
                 openLink: 'https://wodwizard.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/wodWizard',
-                alt: 'Screenshot of wodWizard app'
+                alt: 'Screenshot of wodWizard app',
+                info: ''
             },
         ]
      }
@@ -76,6 +82,7 @@ class Projects extends Component {
                             openLink={project.openLink}
                             gitLink={project.gitLink}
                             alt={project.alt}
+                            info={project.info}
                         />
                     )}
                     </CardGroup>
