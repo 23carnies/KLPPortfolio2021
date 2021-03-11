@@ -82,9 +82,11 @@ button, a {
 
 main {
   margin: 0 auto;
-  height: calc(100% - 215px);
+  height: calc(100% - 255px);
   /* height: 100vh; */
 }
+
+
 
 
 /* @supports (-webkit-appearance:none) {
