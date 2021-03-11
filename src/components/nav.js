@@ -44,9 +44,10 @@ const HeaderNav = () => {
 export default HeaderNav;
 
 const Nav = styled.div`
-  padding: 0 2rem;
+  padding: 30px 2rem;
   ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
   background: ${black};
+  width: 100%;
   height: 130px;
   ${below.small`
     height: 70px;
@@ -70,7 +71,7 @@ const Logo = styled.img`
 `;
 
 const Name = styled(Link)`
-  padding: 0 2%;
+  padding: 0 1%;
   margin: 0 2%;
   font: ${nameplate};
   text-decoration: none;
@@ -93,13 +94,14 @@ const NavMenu = styled.div`
     flex-direction: column;
     max-height: ${({ isNavOpen }) => (isNavOpen ? "100vh" : "0")};
     transition: max-height 0.3s ease-in;
-    width: 130%;
+    width: 100%;
     z-index: 100;
   `}
 `;
 
 const Hamburger = styled.div`
   ${Flex({fd:'column'})};
+  display: none;
   flex-direction: column;
   cursor: pointer;
 
@@ -113,20 +115,22 @@ const Hamburger = styled.div`
   ${below.large`
     ${Flex({fd:'column'})};
   `}
-  `;
+`;
 
 
 const NavItem = styled(Link)`
   font: ${navItem};
-  color: white;
+  color: ${white};
   text-decoration: none;
   text-transform: uppercase;
   padding: 1rem 30px;
   cursor: pointer;
+
   :hover {
     border-bottom: 3px solid ${white};
     transition: 0.3s ease border;
   };
+
   ${below.small`
     font-size: 1.7rem;
   `}
