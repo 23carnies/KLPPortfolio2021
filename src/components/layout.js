@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+// import Header from "./header"
+import HeaderNav from './nav';
 import Footer from "./footer"
 import "./layout.css"
 
@@ -17,7 +18,7 @@ const Layout = ({ children }) => {
   
   return (
     <>
-      <Header />
+      <HeaderNav />
       <main>
         {children}
       </main>
@@ -26,8 +27,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Layout
