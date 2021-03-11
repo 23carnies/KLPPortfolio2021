@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import Header from '../components/header';
+import Header from '../components/other/header';
 import { Flex, orange1,orange3, yellow3, imgBorder, title, text, below } from '../components/utilities'
 
 const About = () => {
@@ -36,11 +36,16 @@ const AboutBack = styled.div`
     ${below.xLarge`
         max-width: 1280px;
     `}
+    
+
 `;
 
 const Box = styled.div`
     ${Flex({ai:'flex-start'})}
     width: 100%;
+    ${below.large`
+        ${Flex({fd:'row',fw:'wrap'})};
+    `}
 `;
 
 const Headline = styled.h3`
@@ -60,13 +65,18 @@ const Img = styled.img`
     margin: 40px 20px;
     width: 30%;
     border-radius: 12px;
-
+    ${below.large`
+        width: 50%;
+    `}
 `;
 
 const AboutText = styled.p`
     font: ${text};
     max-width: 95%;
     margin: 40px 20px;
+    ${below.large`
+        font-size: 1.5rem;
+    `}
 `;
 
 const Quote = styled(AboutText)`
