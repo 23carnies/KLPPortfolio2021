@@ -38,7 +38,7 @@ const IndexPage = () => (
           <Link to="https://github.com/23carnies/tux"><Text github>t.ux Github repo</Text></Link>
         </Tux>
           {/* <SmallCard /> */}
-          <Text projects>Check out more projects here.</Text>
+          <Text projects type="more">Check out more projects here.</Text>
 
         </Projects>
 
@@ -53,7 +53,7 @@ const IndexPage = () => (
         <Link to="/contact">
           <h4>Email me here.</h4>
         </Link>
-          <Text>I am looking for a Front End Engineering<br/> role at a team-focused company.</Text>
+          <Text type="more">I am looking for a Front End Engineering<br/> role at a team-focused company.</Text>
       </Contact>
 
     </Main>
@@ -73,7 +73,8 @@ const Section = styled.section`
   height: 75vh;
   width: 33.33vw;
   ${Flex};
-  ${below.large`
+  ${below.xLarge`
+    height: 75vh;
     width: 100vw;
   `};
 `;
@@ -94,16 +95,13 @@ const Phoenix = styled.img`
 `;
 
 const Text = styled.p`
-  color: ${black};
-  text-align: center;
-  padding: 0 20px;
-  margin: 0;
   font: ${boldType};
-  z-index: 5;
+  color: ${black};
+  margin: 0;
+  padding: 10px;
   grid-row: 3/span 1;
-  background: rgba(255,255,255,.2);
+  background: ${({ type }) => ((type === 'quote') || (type === 'more') ? 'rgba(255,255,255,.2)' : 'none')};
   border-radius: 8px;
-  padding: 1%;
   ${below.large`
     background: ${({ type }) => (type === 'quote' ? 'rgba(255,255,255,.2)' : 'none')};
     
@@ -131,13 +129,13 @@ const Fire = styled.img`
   bottom: 0%;
   z-index: 1;
   ${below.xXLarge`
-    bottom: 2.7%;
+    bottom: 13.6%;
   `}
   ${below.xLarge`
-    bottom: 3.2%;
+    bottom: 13.4%;
   `}
   ${below.large`
-    bottom: 3.7%;
+    bottom: 13.3%;
   `}
   ${below.medium`
     bottom: 13.2%;
@@ -157,7 +155,6 @@ const Tux = styled.div`
   width: 75%;
   border: 1px solid ${yellow3};
   height: 50%;
-  /* background: transparent; */
   background-color: rgba(255,255,255,.25);
   border-radius: 15px;
   z-index: 15;
@@ -175,7 +172,6 @@ const TuxImg = styled.img`
   width: 100%;
   margin: 0 auto;
   padding: 5%;
-  /* z-index: 15; */
 `;
 
 

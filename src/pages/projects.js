@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout';
-import Header from '../components/header';
+// import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';

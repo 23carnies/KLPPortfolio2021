@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/header';
+// import Header from '../components/header';
 import Layout from '../components/layout';
 import ContactMe from '../components/emailjs';
 import { Flex, title, yellow3, below } from '../components/utilities';
