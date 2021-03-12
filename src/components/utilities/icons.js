@@ -6,7 +6,7 @@ import { BiMailSend } from '@react-icons/all-files/bi/BiMailSend';
 import { AiOutlineMenu } from '@react-icons/all-files/ai/AiOutlineMenu';
 import { IconContext } from '@react-icons/all-files/';
 import { white, box_shadow2, Flex, below } from '../utilities';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Hamburger = () => {
   return ( 
@@ -76,6 +76,9 @@ export const IconCircle = styled.div`
     ${Flex};
     margin: 30px;
     border: 1px solid white;
+    ${below.large`
+      margin: 20px;
+    `}
     ${below.medium`
         width: 60px;
         height: 60px;
@@ -83,5 +86,12 @@ export const IconCircle = styled.div`
     ${below.small`
         width: 80px;
         height: 80px;
+    `}
+
+    ${props => props.contact && css`
+        margin: 20px;
+        ${below.large`
+          margin: 15px;
+        `}
     `}
 `;
