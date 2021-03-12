@@ -40,10 +40,10 @@ export default HeaderNav;
 
 const Nav = styled.div`
   padding: 30px 2rem;
-  ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
+  ${Flex({jc:'space-between',ai:'center',fw:'nowrap'})};
   background: ${black};
-  width: 100%;
   height: 130px;
+  margin-top: 1%;
   ${below.xXLarge`
     ${Flex({ai:'center',fw:'nowrap'})}
   `}
@@ -65,9 +65,8 @@ const Nav = styled.div`
 
 const Logo = styled.img`
   width: 100px;
-  padding: 0 2%;
-  margin: 0 2%;
   ${below.xXLarge`
+    margin-right: 20px;
     padding: 0 .5%;
     margin: 0 .5%;
   `}
@@ -81,7 +80,7 @@ const Logo = styled.img`
 
 const Name = styled(Link)`
   padding: 0 1%;
-  margin: 0 2%;
+  margin: 0 1%;
   font: ${nameplate};
   text-decoration: none;
   ${below.xXLarge`
@@ -108,11 +107,7 @@ ${below.large`
 
 const NavMenu = styled.div`
   ${Flex({jc:'space-between',ai:'center'})};
-  /* position: relative; */
   background: ${black};
-  /* ${below.xXLarge`
-    font-size: 1.7rem;
-  `} */
   ${below.large`
     overflow: hidden;
     flex-direction: column;
