@@ -132,6 +132,5 @@ const CardGroup = styled.section`
     height: 100vh;
     ${below.xLarge`
         max-width: 1280px;
-        overflow: scroll;
     `}
 `;
