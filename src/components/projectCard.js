@@ -50,16 +50,6 @@ export const CardFront = styled.div`
     background: ${mauve};
     background: linear-gradient(to top, ${mauve} 2%,  #ff5126 100%);
     box-shadow: ${box_shadow3};
-
-    ${props => props.small && css`
-        background: none;
-        box-shadow: none;
-        position: absolute;
-        left: 25%;
-        top: 10%;
-        border-radius: 12px;
-        border: 2px solid blue;
-    `}
 `;
 
 export const CardBack = styled(CardFront)`
@@ -70,13 +60,6 @@ export const Image = styled.img`
     max-width: 225px;
     border: ${cardBorder};
     border-radius: 5px;
-
-    ${props => props.small && css`
-        margin: 20px;
-        /* position: absolute;
-        top: 0;
-        left: 25%; */
-    `}
 `;
 
 
@@ -85,12 +68,6 @@ export const Pgraph = styled.p`
     text-align: center;
     line-height: 24px;
     margin: 30px 5px 5px;
-    /* color: ${white}; */
-
-    ${props => props.small && css`
-        color: ${black};
-        font: ${boldType}
-    `}
 `;
 
 export const HTwo = styled.h2`
