@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import ProjectCard from '../components/projectCard';
 
 import styled from 'styled-components';
-import { Flex, yellow3, title, below } from '../components/utilities';
+import { Flex, yellow3, title, below, text } from '../components/utilities';
 
 class Projects extends Component {
     state = { 
@@ -15,7 +15,7 @@ class Projects extends Component {
                 image: 'https://i.imgur.com/P0dkuGz.png',
                 openLink: 'https://tux-staging.herokuapp.com/login',
                 gitLink: 'https://github.com/23carnies/tux',
-                alt: 'Logo for project pronounced Tux',
+                alt: 'Logo for product pronounced Tux',
                 info: ''
             },
             {
@@ -29,7 +29,7 @@ class Projects extends Component {
             },
             {
                 title: 'Meet Your Maker',
-                description: 'A full CRUD MERN stack app connecting urban farmers and makers (like myself) with local buyers. A team project at General Assembly utilizing AWS-SDK and Semantic UI for React.',
+                description: 'A full CRUD MERN stack app connecting urban farmers and makers (like myself) with local buyers. A team project at General Assembly utilizing AWS-SDK and Semantic UI for React. I took the lead in building the majority of the React and Node.js for this project.',
                 image: 'https://i.imgur.com/t7IPbkV.png',
                 openLink: 'https://meetyourmaker925.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/MeetYourMakerCoupled',
@@ -47,7 +47,7 @@ class Projects extends Component {
             },
             {
                 title: 'bilingüe',
-                description: 'A full CRUD app built in Django and Python for maintaining Spanish language skills. Designed with pure CSS. Built as a unit project at General Assembly.',
+                description: 'A full CRUD app built in Django and Python for maintaining Spanish language skills. Designed with pure CSS. Built as a solo project at General Assembly.',
                 image: 'https://i.imgur.com/TKIM2hY.png',
                 openLink: '',
                 gitLink: 'https://github.com/23carnies/bilingue',
@@ -56,7 +56,7 @@ class Projects extends Component {
             },
             {
                 title: 'wodWizard',
-                description: 'A full CRUD Express, MongoDB, and Node.js app for daily workouts utilizing Bootstrap for styling and quotes from the Forismatic API. Built as a unit project at General Assembly.',
+                description: 'A full CRUD Express, MongoDB, and Node.js app for daily workouts utilizing Bootstrap for styling and quotes from the Forismatic API. Built as a solo project at General Assembly.',
                 image: 'https://i.imgur.com/e7HxXxR.png',
                 openLink: 'https://wodwizard.herokuapp.com/',
                 gitLink: 'https://github.com/23carnies/wodWizard',
@@ -72,6 +72,7 @@ class Projects extends Component {
                 <ProjectBack>
                     <Headline>My work</Headline>
                     <SubLine>Click card for more info</SubLine>
+                    <Note>Some projects are hosted on heroku and may take several seconds to load.</Note>
                     <CardGroup>
                     {this.state.projects.map((project, idx) =>
                         <ProjectCard 
@@ -97,6 +98,7 @@ export default Projects;
 const ProjectBack = styled.article`
     ${Flex({fd:'column'})}
     padding: 0 0 8%;
+    overflow: hidden;
 `;
 
 const Headline = styled.h3`
@@ -119,11 +121,17 @@ const SubLine = styled.p`
     
 `;
 
+const Note = styled.p`
+    font: ${text};
+    font-size: 1rem;
+`;
+
 const CardGroup = styled.section`
     ${Flex({fw:'wrap'})};
     max-width: 1400px;
     height: 100vh;
     ${below.xLarge`
         max-width: 1280px;
+        overflow: scroll;
     `}
 `;
