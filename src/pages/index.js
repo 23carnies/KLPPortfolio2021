@@ -132,19 +132,22 @@ const Fire = styled.img`
   bottom: 0%;
   z-index: 1;
   ${below.xXLarge`
-    bottom: 6.2%;
+    bottom: 3.7%;
   `}
   ${below.xLarge`
-    bottom: 6.8%;
+    bottom: 4.3%;
   `}
   ${below.large`
-    bottom: 7.2%;
+    bottom: 5.2%;
   `}
   ${below.medium`
-    bottom: 8.1%;
+    bottom: 6%;
   `}
   ${below.small`
-    bottom: 15.1%;
+    bottom: 13.5%;
+  `}
+  ${below.xSmall`
+    bottom: 14.8%;
   `}
 `;
 
