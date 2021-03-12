@@ -38,7 +38,7 @@ const FootDiv = styled.div`
   margin-top: 10px; 
   ${Flex({jc:'center'})};
   ${below.small`
-    margin: 0;
+    margin: 0 auto;
   `}
 `;
 

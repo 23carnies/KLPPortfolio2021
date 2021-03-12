@@ -81,16 +81,9 @@ button, a {
 }
 
 main {
-  height: calc(100% + 245px);
   width: 100vw;
   margin: 0 auto;
 }
-
-/* @media (max-width: 1230px) {
-  main {
-    height: calc(100vh + 800px)
-  } */
-/* } */
 
 
 
