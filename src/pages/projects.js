@@ -129,7 +129,6 @@ const Note = styled.p`
 const CardGroup = styled.section`
     ${Flex({fw:'wrap'})};
     max-width: 1400px;
-    height: 100vh;
     ${below.xLarge`
         max-width: 1280px;
     `}
