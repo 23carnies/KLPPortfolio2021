@@ -22,16 +22,15 @@ export default Contact;
 
 const Box = styled.div`
     ${Flex({fd:'column'})};
-    /* width: 100%; */
     text-align: center;
-
+    margin-bottom: 55px;
 `;
 
 const Headline = styled.h3`
     text-align: center;
     font-family: ${title};
     color: ${yellow3};
-    margin: 1.5% 1% 1%;
+    margin: 2.5% 1% 1%;
     ${below.large`
         font-size: 2.4rem;
     `}
