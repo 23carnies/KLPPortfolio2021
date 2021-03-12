@@ -80,9 +80,9 @@ const Name = styled(Link)`
   margin: 0 1%;
 `}
   ${below.small`
-  font-size: 1.1rem;
-  margin: 4% 1%;
-`}
+    font-size: 1.6rem;
+    margin: 0 1% 17% 1%;
+  `}
 `;
 
 const NavMenu = styled.div`
@@ -114,6 +114,9 @@ const Hamburger = styled.div`
   }
   ${below.large`
     ${Flex({fd:'column'})};
+  `}
+  ${below.small`
+    margin: 0 1% 17% 1%;
   `}
 `;
 
