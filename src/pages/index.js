@@ -44,11 +44,11 @@ const IndexPage = () => (
 
       {/* Contact Section */}
       <Contact>
-          <div style={{display:'flex'}}>
+          <ContactDiv>
             <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
             <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
             <a rel="noreferrer" target="_blank" href="mailto:karenlobinperkins@gmail.com" alt="Email logo, opens new email to Karen's gmail account"><LgMail /></a>
-          </div>
+          </ContactDiv>
           <h4>I'm Available<br/> for Hire!</h4>
         <Link to="/contact">
           <h4>Email me here.</h4>
@@ -181,6 +181,12 @@ const TuxImg = styled.img`
 `;
 
 
+const ContactDiv = styled.div`
+  ${Flex};
+  max-width: 30vw;
+  ${below.large`
+  `}
+`;
 
 const Contact = styled(Section)`
   display: ${Flex({fd:'column'})};
