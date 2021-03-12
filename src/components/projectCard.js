@@ -51,6 +51,9 @@ export const CardFront = styled.div`
     background: linear-gradient(to top, ${mauve} 2%,  #ff5126 100%);
     box-shadow: ${box_shadow3};
     ${below.small`
+        width: 330px;
+    `}
+    ${below.xXSmall`
         width: 300px;
     `}
 `;
