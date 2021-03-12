@@ -9,6 +9,7 @@ import {
   white,
   nameplate,
   black,
+  violet,
 } from './utilities';
 import { useSpring, animated } from 'react-spring';
 
@@ -31,7 +32,7 @@ const HeaderNav = () => {
                 <span />
                 <span />
             </Hamburger>
-            <NavMenu isNavOpen={isNavOpen}>
+            <NavMenu isNavOpen={isNavOpen} style={navAnimate}>
                 <NavItem to="/">Home</NavItem>
                 <NavItem to="/about">About</NavItem>
                 <NavItem to="/projects">Projects</NavItem>
@@ -49,6 +50,12 @@ const Nav = styled.div`
   background: ${black};
   width: 100%;
   height: 130px;
+  ${below.xXLarge`
+    ${Flex({ai:'center',fw:'nowrap'})}
+  `}
+  ${below.large`
+  ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
+  `}
   ${below.small`
     height: 70px;
   `}
@@ -62,6 +69,10 @@ const Logo = styled.img`
   width: 100px;
   padding: 0 2%;
   margin: 0 2%;
+  ${below.xXLarge`
+    padding: 0 .5%;
+    margin: 0 .5%;
+  `}
   ${below.medium`
     width: 70px;
   `}
@@ -75,6 +86,14 @@ const Name = styled(Link)`
   margin: 0 2%;
   font: ${nameplate};
   text-decoration: none;
+  ${below.xXLarge`
+  font-size: 2.3rem;
+  margin-left: -15px;
+  padding: 0;
+`}
+${below.large`
+  font-size: 3rem;
+`}
   ${below.medium`
   font-size: 2rem;
   margin: 0 1%;
@@ -87,15 +106,21 @@ const Name = styled(Link)`
 
 const NavMenu = styled.div`
   ${Flex({jc:'space-between',ai:'center'})};
-  position: relative;
+  /* position: relative; */
   background: ${black};
+  /* ${below.xXLarge`
+    font-size: 1.7rem;
+  `} */
   ${below.large`
     overflow: hidden;
     flex-direction: column;
     max-height: ${({ isNavOpen }) => (isNavOpen ? "100vh" : "0")};
-    transition: max-height 0.3s ease-in;
+    transition: all 0.3s ease-in;
     width: 100%;
     z-index: 100;
+    padding: ${({ isNavOpen }) => (isNavOpen ? "1rem 40vw 100vh" : "0")};
+    margin: 10px 0;
+    background: linear-gradient(to top, #ff99cc 8%,  ${violet} 100%);
   `}
 `;
 
@@ -106,14 +131,15 @@ const Hamburger = styled.div`
   cursor: pointer;
 
   span {
-    height: 2px;
-    width: 25px;
+    height: 3px;
+    width: 35px;
     background: ${white};
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     border-radius: 5px;
   }
   ${below.large`
     ${Flex({fd:'column'})};
+    margin-left: auto;
   `}
   ${below.small`
     margin: 0 1% 17% 1%;
@@ -134,6 +160,14 @@ const NavItem = styled(Link)`
     transition: 0.3s ease border;
   };
 
+  ${below.xXLarge`
+    font-size: 1.7rem;
+    padding: 0 25px;
+  `}
+  ${below.large`
+    font:${navItem};
+    padding: 1rem;
+  `}
   ${below.small`
     font-size: 1.7rem;
   `}
