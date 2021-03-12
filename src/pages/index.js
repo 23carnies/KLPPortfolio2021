@@ -92,6 +92,9 @@ const Phoenix = styled.img`
   z-index: 10;
   transform: rotate(5deg) scaleX(-1);
   margin: 0 auto;
+  ${below.small`
+    width: 225px;
+  `}
 `;
 
 const Text = styled.p`
