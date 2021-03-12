@@ -2,7 +2,7 @@ import React, { useState,  } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled, { css } from 'styled-components';
 
-import { Flex, boxshadow4, black, grey, white, violet, mauve, cardBorder, box_shadow3, boldType } from '../components/utilities';
+import { Flex, boxshadow4, black, below, white, violet, mauve, cardBorder, box_shadow3, boldType } from '../components/utilities';
 
 const ProjectCard = ({ title, description, image, openLink, gitLink, alt, info }) => {
     const [cardFlip, setCardFlip] = useState(false);
@@ -50,6 +50,9 @@ export const CardFront = styled.div`
     background: ${mauve};
     background: linear-gradient(to top, ${mauve} 2%,  #ff5126 100%);
     box-shadow: ${box_shadow3};
+    ${below.small`
+        width: 300px;
+    `}
 `;
 
 export const CardBack = styled(CardFront)`
