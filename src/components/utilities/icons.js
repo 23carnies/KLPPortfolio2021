@@ -3,20 +3,10 @@ import { FiGithub } from '@react-icons/all-files/fi/FiGithub';
 import { AiOutlineLinkedin } from '@react-icons/all-files/ai/AiOutlineLinkedin';
 import { FaRegFilePdf } from '@react-icons/all-files/fa/FaRegFilePdf';
 import { BiMailSend } from '@react-icons/all-files/bi/BiMailSend';
-import { AiOutlineMenu } from '@react-icons/all-files/ai/AiOutlineMenu';
 import { IconContext } from '@react-icons/all-files/';
 import { white, box_shadow2, Flex, below } from '../utilities';
 import styled, { css } from 'styled-components';
 
-export const Hamburger = () => {
-  return ( 
-    <IconContext.Provider
-      value={{ size: '45px', color: `${white}` }}
-    >
-        <AiOutlineMenu />
-    </IconContext.Provider>
-   );
-}
 
 export const LgGithub = () => {
   return ( 
