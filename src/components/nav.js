@@ -11,17 +11,11 @@ import {
   black,
   violet,
 } from './utilities';
-import { useSpring, animated } from 'react-spring';
 
 
 
 const HeaderNav = () => {
     const [isNavOpen, setNavOpen] = useState(false);
-    const navAnimate = useSpring({
-        transform: isNavOpen
-          ? `translate3d(0,0,0) scale(1)`
-          : `translate3d(100%,0,0) scale(0.6)`,
-      });
       
     return ( 
         <Nav>
@@ -32,7 +26,7 @@ const HeaderNav = () => {
                 <span />
                 <span />
             </Hamburger>
-            <NavMenu isNavOpen={isNavOpen} style={navAnimate}>
+            <NavMenu isNavOpen={isNavOpen}>
                 <NavItem to="/">Home</NavItem>
                 <NavItem to="/about">About</NavItem>
                 <NavItem to="/projects">Projects</NavItem>
@@ -54,10 +48,14 @@ const Nav = styled.div`
     ${Flex({ai:'center',fw:'nowrap'})}
   `}
   ${below.large`
-  ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
-  `}
+    ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
+    `}
   ${below.small`
+  ${Flex({jc:'',ai:'center',fw:'wrap'})};
     height: 70px;
+  `}
+  ${below.xXSmall`
+    margin-bottom: 10px;
   `}
   /* position: absolute;
   top: 0;
@@ -102,6 +100,10 @@ ${below.large`
     font-size: 1.6rem;
     margin: 0 1% 17% 1%;
   `}
+  ${below.xXSmall`
+    font-size: 1rem;
+    margin: 0 0 17% 0;
+  `}
 `;
 
 const NavMenu = styled.div`
@@ -129,6 +131,7 @@ const Hamburger = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-right: 20px;
 
   span {
     height: 3px;
@@ -136,6 +139,14 @@ const Hamburger = styled.div`
     background: ${white};
     margin-bottom: 8px;
     border-radius: 5px;
+    ${below.small`
+      height: 2px;
+      width: 25px;
+      margin-bottom: 6px;
+    `};
+    ${below.xXSmall`
+      width: 20px;
+    `}
   }
   ${below.large`
     ${Flex({fd:'column'})};
@@ -143,6 +154,9 @@ const Hamburger = styled.div`
   `}
   ${below.small`
     margin: 0 1% 17% 1%;
+  `}
+  ${below.xXSmall`
+    margin: 0 0 17% 0;
   `}
 `;
 
