@@ -6,7 +6,8 @@ const size = {
     large: 1280,
     medium: 1024,
     small: 768,
-    xSmall: 640
+    xSmall: 640,
+    xXSmall: 500,
 }
 
 export const below = Object.keys(size).reduce((acc, label) => {
