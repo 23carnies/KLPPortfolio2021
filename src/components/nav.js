@@ -39,23 +39,23 @@ const HeaderNav = () => {
 export default HeaderNav;
 
 const Nav = styled.div`
-  padding: 30px 2rem;
+  padding: 2% 2rem;
   ${Flex({jc:'space-between',ai:'center',fw:'nowrap'})};
   background: ${black};
   height: 130px;
-  margin-top: 1%;
   ${below.xXLarge`
     ${Flex({ai:'center',fw:'nowrap'})}
-  `}
+    `}
   ${below.large`
     ${Flex({jc:'space-between',ai:'center',fw:'wrap'})};
     `}
   ${below.small`
-  ${Flex({jc:'',ai:'center',fw:'wrap'})};
+    ${Flex({jc:'',ai:'center',fw:'wrap'})};
     height: 70px;
+    padding-bottom: 5%;
   `}
   ${below.xXSmall`
-    margin-bottom: 10px;
+    padding-top: 5%;
   `}
   /* position: absolute;
   top: 0;
