@@ -38,7 +38,7 @@ const IndexPage = () => (
           <Link to="https://github.com/23carnies/tux"><Text github>t.ux Github repo</Text></Link>
         </Tux>
           {/* <SmallCard /> */}
-          <Text projects type="more">Check out more projects here.</Text>
+          <Link to="/projects"><Text projects type="more">Check out more projects here.</Text></Link>
 
         </Projects>
 
