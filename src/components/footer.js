@@ -11,7 +11,7 @@ const Footer = () => {
           <FootDiv>
             <a rel="noreferrer" target="_blank" href="https://github.com/23carnies" alt="Github logo, opens new window to Karen's Github page"><LgGithub /></a>
             <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/karen-lobin-perkins/" alt="LinkedIn logo, opens new window to Karen's LinkedIn page"><LgLinkedIn /></a>
-            <a rel="noreferrer" target="_blank" href="https://pensive-bartik-520386.netlify.app/posts/karenLobinPerkinsRes.pdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
+            <a rel="noreferrer" target="_blank" href="http://23carnies.com/karenLobinPerkinsRes.pdf" alt="link to Karen's resume in pdf format, opens new window"><LgPDF /></a>
 
           </FootDiv>
           <FootP>
