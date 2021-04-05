@@ -84,15 +84,14 @@ const Name = styled(Link)`
   font: ${nameplate};
   text-decoration: none;
   ${below.xXLarge`
-  font-size: 2.3rem;
   margin-left: -15px;
   padding: 0;
 `}
 ${below.large`
-  font-size: 3rem;
+
 `}
   ${below.medium`
-  font-size: 2rem;
+
   margin: 0 1%;
 `}
   ${below.small`

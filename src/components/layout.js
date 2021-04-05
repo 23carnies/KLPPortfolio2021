@@ -13,16 +13,20 @@ import PropTypes from "prop-types"
 import HeaderNav from './nav';
 import Footer from "./footer"
 import "./layout.css"
+import { ThemeProvider } from "styled-components";
+import { darkTheme } from "./utilities/Themes";
 
 const Layout = ({ children }) => {
   
   return (
     <>
+    <ThemeProvider theme={darkTheme}>
       <HeaderNav />
       <main>
         {children}
       </main>
       <Footer />
+    </ThemeProvider>
     </>
   )
 }
