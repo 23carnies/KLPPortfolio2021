@@ -8,7 +8,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import Bird from '../images/phoenix.svg';
-import Flames from '../images/fire.svg';
 
 const IndexPage = () => (
   
@@ -25,7 +24,6 @@ const IndexPage = () => (
           <Phoenix src={Bird} alt="phoenix"/>
           <Text type="quote">"Our greatest glory is not in never failing, but in rising every time we fall." <br/><i>--Confucious</i></Text>
       </About>
-          <Fire src={Flames} alt="flames"/>
 
       {/* Projects Section */}
       <Projects>
@@ -120,34 +118,6 @@ const Text = styled.p`
   `}
   ${props => props.descript && css`
     font: ${descript};
-  `}
-`;
-
-const Fire = styled.img`
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 3.6%;
-  position: absolute;
-  left: 0;
-  bottom: 0%;
-  z-index: 1;
-  ${below.xXLarge`
-    bottom: 3.7%;
-  `}
-  ${below.xLarge`
-    bottom: 4.3%;
-  `}
-  ${below.large`
-    bottom: 5.2%;
-  `}
-  ${below.medium`
-    bottom: 6%;
-  `}
-  ${below.small`
-    bottom: 13.5%;
-  `}
-  ${below.xSmall`
-    bottom: 14.8%;
   `}
 `;
 
